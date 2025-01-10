@@ -1,0 +1,73 @@
+# Quickstart
+
+TK Include  image of Basejump data page here
+
+When you first log in, you will start on the data page. The data page contains a few sample pieces of data from our demo databases. To retrieve your own data, either select the chat page in the sidebar or start chatting with the chat bar that is present throughout the app.&#x20;
+
+Your chat is scoped to whichever team you currently have selected. Each team has databases that have been provisioned by your company admin. If you are the initial user and created the account, then you will have admin privileges and will see an admin sidebar in addition to the typical sidebar that members see.
+
+## Adding a new datasource
+
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
+In order to get started chatting with your own data, you will need to add a datasource on the datasources page. We are focused on chatting with your database so we have built this feature out first. We will soon be adding the ability to upload CSV files as well as adding knowledge store datasources to help provide the AI with more context.
+
+You see that two database sources have already been added, the hr\_demo\_db and the shop\_demo\_db. To add your own database, follow these steps:
+
+1. Click the 'Add Database' button
+
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+
+2. Fill in your database credentials in the modal window. To include any additional schemas besides the default schema, add them in the 'Accessible Schemas'. For more information on creating templated schemas using Jinja, refer to the 'Datasources' page
+
+{% content-ref url="../your-sidebar/datasources.md" %}
+[datasources.md](../your-sidebar/datasources.md)
+{% endcontent-ref %}
+
+
+
+3. Your database comes with the initial connection that you provided. You can add additional connections with different usernames and passwords by selecting the connection number on the database line. Access is provisioned at the connection level and not at the database level.
+
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+
+4\. One of the most important steps is that you supplement the automatic profiling of your database for the Basejump AI data agent with metadata. If you have not edited the metadata, you will get a caution symbol indicating it need to be updated and/or reviewed.
+
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+
+You will see each table in the left sidebar in the modal window. You have options to fill out information at the table and column level. If the information was available in the database, it will already be filled in your metadata. This information provides context to the AI and will improve the ability for it to retrieve the correct information based on the user input.
+
+<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+
+## Creating a Team
+
+Now that you have added your first datasource, go to the team page by clicking the team option in the sidebar to provide access to your new datasource connection.
+
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+
+Follow these steps to create a team and provide access:
+
+1. Click 'Add Team'
+2. Provide a unique team name and select a data connection
+
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+
+3\. Click 'Add Team'
+
+## Chatting with the AI
+
+By this point, you should have added a datasource and given a team access to your information. Before chatting with the AI, you will need to select your team if not already selected. Once selected, select the chat icon in the sidebar.
+
+Use the chat bar at the bottom of the screen to ask the AI a question. As the AI responds, you can see its thoughts as it is thinking through the question and iteratively solving it.
+
+<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+
+That's it! You now have set up your account to start chatting with the AI data agent. Start inviting other users to your company and teams to give them access as well. Happy Basejumping!
+
+## API
+
+If you're interested in the API, see the API docs for information for getting started using the API
+
+{% content-ref url="../api.md" %}
+[api.md](../api.md)
+{% endcontent-ref %}
+

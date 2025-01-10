@@ -1,3 +1,15 @@
 # Table of contents
 
-* [basejump-docs](README.md)
+* [Overview](README.md)
+* [Getting Started](getting-started/README.md)
+  * [Quickstart](getting-started/quickstart.md)
+  * [Concepts](getting-started/concepts.md)
+* [Account](account.md)
+* [Data Governance](data-governance.md)
+* [Your Sidebar](your-sidebar/README.md)
+  * [Datasources](your-sidebar/datasources.md)
+* [Security](security.md)
+* [API](api.md)
+* [Integrations](integrations.md)
+* [Roadmap](roadmap.md)
+* [Changelog](changelog.md)
