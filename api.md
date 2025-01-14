@@ -1,8 +1,6 @@
 # API
 
-The API documentation can be found using the following link:
-
-[https://docs.basejump.ai/api/api-reference/](https://docs.basejump.ai/api/api-reference/)
+The API documentation can be found using the following link:[API Reference](https://docs.basejump.ai/api/api-reference/)
 
 The API can be used to automate interaction with the Basejump AI application and integrate the Basejump AI data agent with other software tools. It's also intended to allow the User flexibility to use the Basejump product using a different UI that they build themselves in addition to integrating the Basejump AI agent into another existing tool.
 
