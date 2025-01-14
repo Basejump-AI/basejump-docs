@@ -64,3 +64,9 @@ A record is a data object that is 1 row by many columns. In the Basejump UI, rec
 ### Dataset
 
 A dataset is a data object that is many rows by many columns. In the Basejump UI, datasets are shown with a purple gradient and a table icon.
+
+## Additional Concepts
+
+### Basejump credit
+
+A Basejump credit is the currency used within Basejump to measure how much AI inference is left on your account. Two credits is roughly equivalent to a single query/prompt. Basejump credits are filled either through regular subscription payments or by paying for additional credits. Accounts that use all of their credits and have billing set up will be automatically charged for additional credits. Refer to the [pricing page](https://basejump.ai/pricing) to see the basejump credits per tier.
