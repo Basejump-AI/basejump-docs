@@ -1,10 +1,3 @@
----
-icon: "<svg><path fill-rule=&quot;evenodd&quot; d=&quot;M12 16.5a4.5 4.5 0 100-9 4.5 4.5 0 000 9zm0 1.5a6 6 0 100-12 6 6 0 000 12z&quot;></path></svg>"
----
-
-<!-- [!badge icon= size="3xl" variant="light"] -->
-
-
 # Teams
 
 A Team is a group of users who have been provisioned a certain level of access to various datasources.
