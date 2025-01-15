@@ -33,8 +33,5 @@ The company was originally called 'DemocratizeDB' since we believed using AI to 
 
 The company was rebranded to Basejump AI in 2024. Basejump is short for 'database jump' to express how many new people are essentially going to be 'taking the leap' into the vast amount of information available in company databases that are only available typically through interfaces such as dashboards.
 
-We're confident that as AI abilities continue to progress that AI will assist with every stage of the data maturity cycle and we want to help that future become a reality as soon as possible. As data becomes  both more available and reliable, it will improve the decision making capabilities of company's everywhere.&#x20;
-
-\
-&#x20;
+We're confident that as AI abilities continue to progress that AI will assist with every stage of the data maturity cycle and we want to help that future become a reality as soon as possible. As data becomes  both more available and reliable, it will improve the decision making capabilities of companies everywhere.
 
