@@ -6,7 +6,7 @@ On the subscription page, the Owner can see the current remaining credit balance
 
 ## Managing Your Subscription
 
-Checkingzy
+Checkingz
 
 The Owner can also manage their subscription. All pricing tiers start with a free trial of 50 credits. If billing is set up, an additional 50 free credits are given.
 
