@@ -8,32 +8,9 @@ repos:
     - id: check-yaml
     - id: detect-private-key
     - id: trailing-whitespace
--   repo: https://github.com/psf/black
-    rev: 23.11.0
-    hooks:
-    - id: black
-      args: ["-l", "119"]
-- repo: https://github.com/astral-sh/ruff-pre-commit
-  # Ruff version.
-  rev: v0.1.7
-  hooks:
-  # Run the linter.
-  - id: ruff
-    args: [ --fix ]
-    verbose: true
-    files: basejump*
--   repo: https://github.com/PyCQA/flake8
-    rev: 6.1.0
-    hooks:
-    -   id: flake8
-        files: basejump*
 - repo: https://github.com/codespell-project/codespell
   rev: v2.3.0
   hooks:
     - id: codespell
-- repo: https://github.com/PyCQA/isort
-  rev: 5.13.2
-  hooks:
-    - id: isort
-      files: basejump*
-      args: ["--profile", "black"]
+      types: [file]  # override default types
+      types_or: [markdown]  # specify markdown files
