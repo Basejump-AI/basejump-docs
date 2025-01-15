@@ -31,7 +31,6 @@ repos:
   rev: v2.3.0
   hooks:
     - id: codespell
-      exclude: ^requirements.txt|vector_idx_html.*|scripts/
 - repo: https://github.com/PyCQA/isort
   rev: 5.13.2
   hooks:
