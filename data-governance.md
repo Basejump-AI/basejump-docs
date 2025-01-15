@@ -4,8 +4,6 @@ Due to the democratization of access to the database that the Basejump AI platfo
 
 Because of this, an AI data analytics solution is incomplete without data governance. We provide tools for User's to easily share their data objects and compare them to understand their differences. Traditional BI tools have made dashboards a priority with typically no data governance included. This led to a proliferation of dashboards with no easy way to compare them except to ask the data analysts why towo dashboards are showing different numbers for the same metric.
 
-![Comic strip showing the prolifireation of information with no data governance](/images/marketoonist_comic_strip.png)
-
 It is imperative for an AI data analytics solution to provide means to compare and understand all of the data that is being retrieved and not miss an opportunity for built-in data governance.
 
 One tool we provide to help understand the data is every piece of retrieved data has the original SQL query included. For User's on the same Team to compare their data objects, they can select the context menu within a data object and select 'Compare'.
