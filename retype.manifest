@@ -1,0 +1,273 @@
+{
+  "version": "3.6.0",
+  "created": "2025-01-15T00:41:04Z",
+  "files": [
+    {
+      "path": ".nojekyll"
+    },
+    {
+      "path": "404.html"
+    },
+    {
+      "path": "about/index.html"
+    },
+    {
+      "path": "account/billing/index.html"
+    },
+    {
+      "path": "account/index.html"
+    },
+    {
+      "path": "account/profile/index.html"
+    },
+    {
+      "path": "api/index.html"
+    },
+    {
+      "path": "changelog/index.html"
+    },
+    {
+      "path": "CNAME"
+    },
+    {
+      "path": "contact_us/index.html"
+    },
+    {
+      "path": "data-governance/index.html"
+    },
+    {
+      "path": "getting-started/concepts/index.html"
+    },
+    {
+      "path": "getting-started/index.html"
+    },
+    {
+      "path": "getting-started/quickstart/index.html"
+    },
+    {
+      "path": "images/account/profile.png"
+    },
+    {
+      "path": "images/banner_image.png"
+    },
+    {
+      "path": "images/basejump_logo.png"
+    },
+    {
+      "path": "images/chat/ai_thoughts.png"
+    },
+    {
+      "path": "images/chat/chat_dataset.png"
+    },
+    {
+      "path": "images/chat/chat_history.png"
+    },
+    {
+      "path": "images/chat/chat_page.png"
+    },
+    {
+      "path": "images/chat/chat_response.png"
+    },
+    {
+      "path": "images/chat/save_data_view.png"
+    },
+    {
+      "path": "images/collections/collections_page.png"
+    },
+    {
+      "path": "images/company/invite_company_members.png"
+    },
+    {
+      "path": "images/data/compare_metric.png"
+    },
+    {
+      "path": "images/data/copy_link.png"
+    },
+    {
+      "path": "images/data/data_comparison.png"
+    },
+    {
+      "path": "images/data/data_page_2025_01_14.png"
+    },
+    {
+      "path": "images/data/data_page.png"
+    },
+    {
+      "path": "images/data/data_tabular_page_2025_01_14.png"
+    },
+    {
+      "path": "images/data/data_tabular_page.png"
+    },
+    {
+      "path": "images/data/metric.png"
+    },
+    {
+      "path": "images/data/refresh_arrow.png"
+    },
+    {
+      "path": "images/datasources/add_database_modal.png"
+    },
+    {
+      "path": "images/datasources/adding_conn_w_templated_schema.png"
+    },
+    {
+      "path": "images/datasources/bulk_import_connections.png"
+    },
+    {
+      "path": "images/datasources/datasource_page.png"
+    },
+    {
+      "path": "images/datasources/edit_metadata.png"
+    },
+    {
+      "path": "images/datasources/manage_connections.png"
+    },
+    {
+      "path": "images/datasources/manage_team_connections.png"
+    },
+    {
+      "path": "images/datasources/required_templated_schema.png"
+    },
+    {
+      "path": "images/datasources/select_edit_metadata.png"
+    },
+    {
+      "path": "images/datasources/select_manage_teams_connections.png"
+    },
+    {
+      "path": "images/datasources/templated_schemas.png"
+    },
+    {
+      "path": "images/explore/explore_erd_diagram.png"
+    },
+    {
+      "path": "images/explore/explore_page.png"
+    },
+    {
+      "path": "images/explore/explore_tables_modal.png"
+    },
+    {
+      "path": "images/image.png"
+    },
+    {
+      "path": "images/interactive_tutorials_2025_01_14.png"
+    },
+    {
+      "path": "images/marketoonist_comic_strip.png"
+    },
+    {
+      "path": "images/sidebar.png"
+    },
+    {
+      "path": "images/subscription/subscription_page.png"
+    },
+    {
+      "path": "images/subscription/upgrade_plan.png"
+    },
+    {
+      "path": "images/team/add_team.png"
+    },
+    {
+      "path": "images/team/collections_page.png"
+    },
+    {
+      "path": "images/team/edit_team.png"
+    },
+    {
+      "path": "images/team/team_page.png"
+    },
+    {
+      "path": "index.html"
+    },
+    {
+      "path": "integrations/index.html"
+    },
+    {
+      "path": "resources/css/retype.css"
+    },
+    {
+      "path": "resources/fonts/Inter-italic-latin-var.woff2"
+    },
+    {
+      "path": "resources/fonts/Inter-roman-latin-var.woff2"
+    },
+    {
+      "path": "resources/js/config.js"
+    },
+    {
+      "path": "resources/js/lunr.js"
+    },
+    {
+      "path": "resources/js/retype.js"
+    },
+    {
+      "path": "resources/js/search.json"
+    },
+    {
+      "path": "resources/lunr.js.LICENSE.txt"
+    },
+    {
+      "path": "resources/mermaid.js.LICENSE.txt"
+    },
+    {
+      "path": "resources/prism.js.LICENSE.txt"
+    },
+    {
+      "path": "resources/retype.js.LICENSE.txt"
+    },
+    {
+      "path": "resources/retype.LICENSE.txt"
+    },
+    {
+      "path": "roadmap/index.html"
+    },
+    {
+      "path": "robots.txt"
+    },
+    {
+      "path": "security/index.html"
+    },
+    {
+      "path": "sidebar-options/administrator-options/datasources/index.html"
+    },
+    {
+      "path": "sidebar-options/administrator-options/index.html"
+    },
+    {
+      "path": "sidebar-options/administrator-options/teams/index.html"
+    },
+    {
+      "path": "sidebar-options/index.html"
+    },
+    {
+      "path": "sidebar-options/member-options/chat/index.html"
+    },
+    {
+      "path": "sidebar-options/member-options/collections/index.html"
+    },
+    {
+      "path": "sidebar-options/member-options/data/index.html"
+    },
+    {
+      "path": "sidebar-options/member-options/docs/index.html"
+    },
+    {
+      "path": "sidebar-options/member-options/explore/index.html"
+    },
+    {
+      "path": "sidebar-options/member-options/index.html"
+    },
+    {
+      "path": "sidebar-options/owner-options/company/index.html"
+    },
+    {
+      "path": "sidebar-options/owner-options/index.html"
+    },
+    {
+      "path": "sidebar-options/owner-options/subscription/index.html"
+    },
+    {
+      "path": "sitemap.xml.gz"
+    }
+  ]
+}

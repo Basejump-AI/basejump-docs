@@ -40,7 +40,7 @@ A team is a group of users who have been provisioned a certain level of access t
 
 Datasources are assigned at the Team level and not the individual User level. Results generated from datasources can be shared within Teams. See the teams page for more information on Team management:
 
-[!ref](/sidebar-options/administrator-options/team.md)
+[!ref](/sidebar-options/administrator-options/teams.md)
 
 ### Datasources
 
