@@ -1,6 +1,6 @@
 # Quickstart
 
-When you first log in, you will start on the data page. The data page contains a few sample pieces of data from our demo databases. To retrieve your own data, either select the chat page in the sidebar or start chatting with the chat bar that is present throughout the app.&#x20;
+When you first log in, you will start on the data page. The data page contains a few sample pieces of data from our demo databases. To retrieve your own data, either select the chat page in the sidebar or start chatting with the chat bar that is present throughout the app.
 
 ![The Data page](/images/data/data_page.png)
 
@@ -12,7 +12,7 @@ Your chat is scoped to whichever team you currently have selected. Each team has
 
 In order to get started chatting with your own data, you will need to add a datasource on the datasources page. We are focused on chatting with your database so we have built this feature out first. We will soon be adding the ability to upload CSV files as well as adding knowledge store datasources to help provide the AI with more context.
 
-You see that two database sources have already been added, the hr\_demo\_db and the shop\_demo\_db. To add your own database, follow these steps:
+You see that two database sources have already been added, the `HR Database` and the `Shop Database`. To add your own database, follow these steps:
 
 1. Click the 'Add Database' button
 
