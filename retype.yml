@@ -7,5 +7,9 @@ branding:
 links:
 - text: Getting Started
   link: https://retype.com/guides/getting-started/
+edit:
+  repo: "https://github.com/Basejump-AI/basejump-docs"
+  branch: "main"  # or whatever your default branch is
+  label: "Edit this page"
 footer:
   copyright: "&copy; Copyright {{ year }} Basejump AI Inc. All rights reserved."

@@ -1,18 +1,20 @@
 # Subscription
 
-On the subscription page, the Owner can see the current remaining credit balance. For more information on Basejump credits, please refer to the concepts page: 
+On the subscription page, the Owner can see the current remaining credit balance. For more information on Basejump credits, please refer to the concepts page:
 
 [!ref](/getting-started/concepts.md)
 
 ## Managing Your Subscription
 
-The Owner can also manage their subscription. All pricing tiers start with a free trial of 50 credits. If billing is set up, an additional 50 free credits are given. 
+truthz
+
+The Owner can also manage their subscription. All pricing tiers start with a free trial of 50 credits. If billing is set up, an additional 50 free credits are given.
 
 When you initially create an account and don't have billing set up, your billing page will have the 'Purchase Additional Credits' button grayed out and inaccessible.
 
 ![The Billing page](/images/billing/billing_page.png)
 
-In order to pay for additional credits, you need to activate your account. Your account will automatically activate after the 14 day free trial period if you have set up billing. 
+In order to pay for additional credits, you need to activate your account. Your account will automatically activate after the 14 day free trial period if you have set up billing.
 
 The Billing page also includes a payment history section to see prior payments made.
 
