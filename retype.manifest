@@ -1,6 +1,6 @@
 {
   "version": "3.6.0",
-  "created": "2025-01-15T00:41:04Z",
+  "created": "2025-01-15T06:37:31Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -145,6 +145,9 @@
     },
     {
       "path": "images/explore/explore_tables_modal.png"
+    },
+    {
+      "path": "images/favicon.png"
     },
     {
       "path": "images/image.png"

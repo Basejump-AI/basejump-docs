@@ -5,7 +5,7 @@ branding:
   title: Basejump AI Docs
   label: Docs
   logo: images/basejump_logo.png
-favicon: images/favicon.ico
+favicon: images/favicon.png
 links:
 - text: Getting Started
   link: https://retype.com/guides/getting-started/ 
