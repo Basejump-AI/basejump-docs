@@ -22,6 +22,7 @@
     * [Datasources](sidebar-options/administrator-options/datasources.md)
     * [Teams](sidebar-options/administrator-options/teams.md)
   * [Owner Options](sidebar-options/owner-options/README.md)
+    * [API Keys](sidebar-options/owner-options/api-keys.md)
     * [Company](sidebar-options/owner-options/company.md)
     * [Subscription](sidebar-options/owner-options/subscription.md)
 * [About](about.md)
