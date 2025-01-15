@@ -1,6 +1,6 @@
 {
   "version": "3.6.0",
-  "created": "2025-01-15T06:37:31Z",
+  "created": "2025-01-15T19:37:15Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -46,6 +46,15 @@
     },
     {
       "path": "images/account/profile.png"
+    },
+    {
+      "path": "images/api_keys/add_api_key_modal.png"
+    },
+    {
+      "path": "images/api_keys/api_keys_page.png"
+    },
+    {
+      "path": "images/api_keys/generated_api_key.png"
     },
     {
       "path": "images/banner_image.png"
@@ -259,6 +268,9 @@
     },
     {
       "path": "sidebar-options/member-options/index.html"
+    },
+    {
+      "path": "sidebar-options/owner-options/api-keys/index.html"
     },
     {
       "path": "sidebar-options/owner-options/company/index.html"
