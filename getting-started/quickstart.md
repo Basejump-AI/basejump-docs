@@ -1,8 +1,10 @@
 # Quickstart
 
-When you first log in, you will start on the data page. The data page contains a few sample pieces of data from our demo databases. To retrieve your own data, either select the chat page in the sidebar or start chatting with the chat bar that is present throughout the app.
+When you first log in, you will start on the data page. The data page is initially blank. Here is what the data page looks like once data has been retrieved.
 
 ![The Data page](/images/data/data_page.png)
+
+To start generating your own data objects, make sure to select a team from the top of the sidebar menu - it's initially set to the 'Default Team'. Then in order to generate your own data objects, either select the chat page in the sidebar or start chatting with the chat bar that is present throughout the app.
 
 Your chat is scoped to whichever team you currently have selected. Each team has databases that have been provisioned by your company admin. If you are the initial user and created the account, then you will have admin privileges and will see an admin sidebar in addition to the typical sidebar that members see.
 
