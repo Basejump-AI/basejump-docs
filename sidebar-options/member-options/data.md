@@ -34,7 +34,7 @@ Item   | Description
 
 The data row view contains the same information as the data tile view, just in tabular form. 
 
-[The Data page row view](/images/data/data_tabular_page.png)
+![The Data page row view](/images/data/data_tabular_page.png)
 
 The data card can be brought up by clicking on a row. Additional context menu items appear on hover. 
 
