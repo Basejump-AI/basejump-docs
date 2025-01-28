@@ -70,7 +70,7 @@ Item   | Description
 
  Data can quickly be shared with your team by clicking the user icon at the bottom-right of the data tile.
 
- <Put image here of the bottom right of the data tile>
+ ![Data tile share icon](/images/data/data_tile_share_icon.png)
 
  If you don't see data that has been shared, refresh the data objects on the page by clicking the circular refresh arrow in the top left of the page.
 
