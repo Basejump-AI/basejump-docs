@@ -17,7 +17,7 @@ An explanation of each is provided on the concepts page:
 
 The tile view shows all data using data tiles. 
 
-[The Data page](/images/data/data_page.png)
+![The Data page](/images/data/data_page.png)
 
 Each data tile has the following information:
 
