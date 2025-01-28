@@ -64,17 +64,17 @@ Item   | Description
 
  The Collections page is linked below for more information on Collections:
 
- [!ref](/sidebar-options/member-options/collections.md)
+[!ref](/sidebar-options/member-options/collections.md)
 
  ## Sharing Data
 
  Data can quickly be shared with your team by clicking the user icon at the bottom-right of the data tile.
 
- ![Data tile share icon](/images/data/data_tile_share_icon.png)
+![Data tile share icon](/images/data/data_tile_share_icon.png)
 
  If you don't see data that has been shared, refresh the data objects on the page by clicking the circular refresh arrow in the top left of the page.
 
- ![Refresh arrow](/images/data/refresh_arrow.png)
+![Refresh arrow](/images/data/refresh_arrow.png)
 
  Once data has been shared, a link to that datasource can also be shared to quickly help a teammate find the data you are referencing. The link icon will be shown on hover. 
 
