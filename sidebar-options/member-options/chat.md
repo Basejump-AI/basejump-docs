@@ -31,3 +31,8 @@ There are also 2 options at the bottom of the window. The user can share the dat
 ## Double-Texting
 
 The AI has the ability to answer questions simultaneously. Before the AI completes its response, you can ask it another question and it will start answering both questions in parallel. 
+
+
+## Result Output
+
+While chatting with the AI, you will generate results for your queries. These results have limitations however. You cannot generate a result over 100 MB. Results over 1 week old in your chat history are not saved. 
