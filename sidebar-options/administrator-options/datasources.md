@@ -12,7 +12,7 @@ In order to get started chatting with your own data, you will need to add a data
 
 ![The Add Database view](/images/datasources/add_database_modal.png)
 
-2. Fill in your database credentials in the modal window. To include any additional schemas besides the default schema, add them in the 'Accessible Schemas' section.
+2. Fill in your database credentials in the modal window. To include any additional schemas besides the default schema, add them in the 'Accessible Schemas' section. The database role you provide needs to have a SELECT permission to the tables you want to give access.
 
 3. Your database comes with the initial connection that you provided. You can add additional connections with different usernames and passwords by selecting the connection number on the database line. Access to Users is provisioned at the connection level and not at the database level.
 

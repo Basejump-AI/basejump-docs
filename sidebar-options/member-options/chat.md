@@ -10,6 +10,17 @@ To rename a chat, select the pencil icon by the chat name at the top of the chat
 
 ![The chat history page](/images/chat/chat_history.png)
 
+## Visualizations
+
+The AI is able to produce visualizations in addition to data objects. The following visualization types are supported:
+- Bar
+- Line
+- Area
+- Scatter
+- Pie
+
+![Visualization example](/images/chat/viz_chat_example.png)
+
 ## Auditing the AI output
 
 After providing your prompt, the user is able to see the AI's thoughts in real-time. This helps the User understand the thought process the AI went through to reach its conclusion and helps the User audit the result. 
@@ -20,7 +31,7 @@ The AI thoughts are not permanently saved however and when the page is reloaded 
 
 Finally, the AI will provide a data object in response to your prompt if the prompt requires it to use a datasource.
 
-![Showing the AI thoughts](/images/chat/chat_dataset.png)
+![A dataset returned by the AI](/images/chat/chat_dataset.png)
 
 Using the data spreadsheet view, you can download or save the data. If you decide to save the data by selecting the star icon, you will see a modal window pop-up with a title and description auto-populated by the AI. The title and description can be edited before saving. Saved data will appear in the data page that can be selected in the sidebar.
 
@@ -32,7 +43,12 @@ There are also 2 options at the bottom of the window. The user can share the dat
 
 The AI has the ability to answer questions simultaneously. Before the AI completes its response, you can ask it another question and it will start answering both questions in parallel. 
 
-
 ## Result Output
 
 While chatting with the AI, you will generate results for your queries. These results have limitations however. You cannot generate a result over 100 MB. Results over 1 week old in your chat history are not saved. 
+
+## Stopping a Chat
+
+While the AI is thinking through a problem, you have the option to stop the chat. In order to stop the chat, select the blue square icon that shows above the up-pointing chevron in the chat toolbar. This will stop all running requests within the chat.
+
+![Stopping the chat](/images/chat/stop_chat.png)

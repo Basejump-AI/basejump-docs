@@ -1,6 +1,6 @@
 {
   "version": "3.6.0",
-  "created": "2025-01-28T15:03:08Z",
+  "created": "2025-02-05T04:41:42Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -9,7 +9,16 @@
       "path": "404.html"
     },
     {
+      "path": "about/changelog/index.html"
+    },
+    {
+      "path": "about/contact_us/index.html"
+    },
+    {
       "path": "about/index.html"
+    },
+    {
+      "path": "about/roadmap/index.html"
     },
     {
       "path": "account/billing/index.html"
@@ -24,13 +33,15 @@
       "path": "api/index.html"
     },
     {
-      "path": "changelog/index.html"
+      "path": "changelog/index.html",
+      "old": true
     },
     {
       "path": "CNAME"
     },
     {
-      "path": "contact_us/index.html"
+      "path": "contact_us/index.html",
+      "old": true
     },
     {
       "path": "data-governance/index.html"
@@ -79,6 +90,12 @@
     },
     {
       "path": "images/chat/save_data_view.png"
+    },
+    {
+      "path": "images/chat/stop_chat.png"
+    },
+    {
+      "path": "images/chat/viz_chat_example.png"
     },
     {
       "path": "images/collections/collections_page.png"
@@ -147,6 +164,9 @@
       "path": "images/datasources/select_manage_teams_connections.png"
     },
     {
+      "path": "images/datasources/ssl_modes.png"
+    },
+    {
       "path": "images/datasources/templated_schemas.png"
     },
     {
@@ -198,6 +218,15 @@
       "path": "integrations/index.html"
     },
     {
+      "path": "integrations/mysql/index.html"
+    },
+    {
+      "path": "integrations/postgres/index.html"
+    },
+    {
+      "path": "integrations/redshift/index.html"
+    },
+    {
       "path": "resources/css/retype.css"
     },
     {
@@ -234,7 +263,8 @@
       "path": "resources/retype.LICENSE.txt"
     },
     {
-      "path": "roadmap/index.html"
+      "path": "roadmap/index.html",
+      "old": true
     },
     {
       "path": "robots.txt"

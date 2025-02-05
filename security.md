@@ -45,6 +45,6 @@ Security reports are available upon request for paid customers.
 
 This information can also be found listed on our website: [Basejump Security Policy](https://basejump.ai/security)
 
-# 9. Whitelisting
+## 9. Whitelisting
 
 Please reach out to support@basejump.ai if our server IP addresses are needed so you can whitelist them on your servers.

@@ -28,7 +28,7 @@
     * [API Keys](sidebar-options/owner-options/api-keys.md)
     * [Company](sidebar-options/owner-options/company.md)
     * [Subscription](sidebar-options/owner-options/subscription.md)
-* [About](about.md)
-  * [Changelog](changelog.md)
-  * [Contact Us](contact_us.md)
-  <!-- * [Roadmap](roadmap.md) -->
+* [About](about/README.md)
+  * [Changelog](about/changelog.md)
+  * [Contact Us](about/contact_us.md)
+  * [Roadmap](about/roadmap.md)

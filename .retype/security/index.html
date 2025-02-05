@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.791391786730">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.792045699970">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -31,11 +31,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../images/favicon.png" rel="icon">
-    <link href="../resources/css/retype.css?v=3.6.0.791391786730" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.6.0.792045699970" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.791391786730" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.792045699970" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.791391786730" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.792045699970" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -175,24 +175,29 @@
     </h1>
 </doc-anchor-target>
 <p>Security is important to us so we have a few measures in place to ensure we are shipping secure software. There are many different aspects of security that we elaborate below to help explain our internal policies. We use multiple industry standard tools to ensure the security of our application.</p>
-<doc-anchor-target id="rbac-role-based-access-control">
+<doc-anchor-target id="1-rbac-role-based-access-control">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#rbac-role-based-access-control">#</doc-anchor-trigger>
-        <span>RBAC (Role-Based Access Control)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-rbac-role-based-access-control">#</doc-anchor-trigger>
+        <span>1. RBAC (Role-Based Access Control)</span>
     </h2>
 </doc-anchor-target>
 <p>To help organizations provide access to only the data that should be seen by an individual, we use role-based access control. This is achieved through multiple methods at Basejump. One method is by using Teams. A Team is a group created by an administrator to limit data access. Each team may have access to different database connections. This is controlled by an administrator. Reports can only be shared within teams to ensure that requisite access has been provided to view the information.</p>
 <p>Additionally, when a database is added, the role associated with the username and password will be used to query the information. Therefore, the given database connection assigned to teams can only access the information based on that database role.</p>
 <p>Finally, when indexing the information to provide to our AI, we only index the metadata and not the table information itself. The AI also only will see the same tables that a user has permission to see. This ensures that the AI is unable to provide any information that a user is not permitted to access.</p>
-<doc-anchor-target id="ai">
+<doc-anchor-target id="2-ai">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#ai">#</doc-anchor-trigger>
-        <span>AI</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-ai">#</doc-anchor-trigger>
+        <span>2. AI</span>
     </h2>
 </doc-anchor-target>
-<p>We only partner with AI providers who do not train on customer data. We only use the database metadata to inform the AI and never index the rows from your data sources.
-API Access
-Access to our API is provided using authentication and refresh tokens. All endpoints are secured using these tokens to ensure only authorized access. There are 4 levels of token access (in order of most to least access):</p>
+<p>We only partner with AI providers who do not train on customer data. We only use the database metadata to inform the AI and never index the rows from your data sources.</p>
+<doc-anchor-target id="3-api-access">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-api-access">#</doc-anchor-trigger>
+        <span>3. API Access</span>
+    </h2>
+</doc-anchor-target>
+<p>Access to our API is provided using authentication and refresh tokens. All endpoints are secured using these tokens to ensure only authorized access. There are 4 levels of token access (in order of most to least access):</p>
 <ul>
 <li>API level</li>
 <li>Account Owner</li>
@@ -200,7 +205,63 @@ Access to our API is provided using authentication and refresh tokens. All endpo
 <li>Member</li>
 </ul>
 <p>Using tokens ensures that API secrets are not used frequently. Refresh tokens are required to be refreshed every 90 days and authentication tokens need to be refreshed every 15 minutes.</p>
-<p>For more security information, please refer to our Basejump Security Policy: <put the Basejump security policy link here></p>
+<doc-anchor-target id="4-sca-software-composition-analysis">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4-sca-software-composition-analysis">#</doc-anchor-trigger>
+        <span>4. SCA (Software Composition Analysis)</span>
+    </h2>
+</doc-anchor-target>
+<p>SCA is our first-line of defense to help write secure code. We scan our code as we’re writing it within our coding environment. Before we merge to production, we push our code to a staging environment. We ensure that the code has no vulnerabilities and any found vulnerabilities from our tool are resolved. We connect it to our Github staging repo so it can find any vulnerabilities before they make it to production. Only when all issues are resolved do we ship the code to production. Our tool also scans the code our software is dependent upon as well. This helps to ensure our code is not vulnerable due to security issues with other software. Before shipping to production, we also use a DAST tool to ensure the code is secure.</p>
+<doc-anchor-target id="5-dast-dynamic-application-security-testing">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#5-dast-dynamic-application-security-testing">#</doc-anchor-trigger>
+        <span>5. DAST (Dynamic Application Security Testing)</span>
+    </h2>
+</doc-anchor-target>
+<p>DAST ensures that our application, regardless of the software used, is secure. It is our final security measure and uses pentesting methods to probe our app for vulnerabilities in the same way a malicious actor might. Before shipping to production, we run an automated scan on our staging application for both the web app and the API. We resolve all alerts that are above the ‘informational’ alert level. This test probes the web app unauthenticated. We then use a manual pentest scan within the tool as an authenticated user. As new features are deployed, we use the authenticated user pentest to test the security of the new feature.</p>
+<doc-anchor-target id="6-sensitive-information-storage-and-encryption">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#6-sensitive-information-storage-and-encryption">#</doc-anchor-trigger>
+        <span>6. Sensitive Information Storage and Encryption</span>
+    </h2>
+</doc-anchor-target>
+<p>Any sensitive data is encrypted at rest. Currently, this is most pertinent in regards to credentials for database connections. All information is provided using HTTPS and SSL/TLS to ensure data encryption in transit as well.</p>
+<p>Any database connection requires SSL/TLS support since the Basejump app won&#x27;t connect if an encrypted connection can&#x27;t be made. For more information on SSL/TLS support for your database, please see refer to the integrations page 
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">Integrations</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>../integrations/</span>
+    </div>
+    <a href="../integrations/" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-anchor-target id="7-firewall">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#7-firewall">#</doc-anchor-trigger>
+        <span>7. Firewall</span>
+    </h2>
+</doc-anchor-target>
+<p>Internal servers and databases use private IP addresses to communicate and transmit information using a virtual private cloud (VPC). The private IPs enable the information to be communicated using local servers not connected to the internet. Access to our internal servers are white-listed by IP address. Any server connected and accessible to the internet requires authentication.</p>
+<doc-anchor-target id="8-security-reporting">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#8-security-reporting">#</doc-anchor-trigger>
+        <span>8. Security Reporting</span>
+    </h2>
+</doc-anchor-target>
+<p>Security reports are available upon request for paid customers.</p>
+<p>This information can also be found listed on our website: <a href="https://basejump.ai/security">Basejump Security Policy</a></p>
+<doc-anchor-target id="9-whitelisting">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#9-whitelisting">#</doc-anchor-trigger>
+        <span>9. Whitelisting</span>
+    </h2>
+</doc-anchor-target>
+<p>Please reach out to <a href="mailto:support@basejump.ai">support@basejump.ai</a> if our server IP addresses are needed so you can whitelist them on your servers.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -216,11 +277,11 @@ Access to our API is provided using authentication and refresh tokens. All endpo
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../integrations/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../integrations/redshift/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Integrations</span>
+                                                <span class="block mt-1">Redshift</span>
                                             </span>
                                         </a>
                                     </div>

@@ -1,5 +1,73 @@
 # Changelog
 
+
+## Visualizations, HIPAA Compliance, AI Internal Docs Tool, and New User Experience
+_February 4, 2025_
+
+We are proud to be launching on Product Hunt again for this release! The last time we launched on Product Hunt was Sept. 2024 and so much has changed since then.
+
+### TLDR
+- :bar_chart: A long-awaited feature was incorporating visualizations.
+- :stethoscope: We're HIPAA compliant! We enforce encryption via our SSL mode options when connecting your database.
+- :wrench: We gave our AI Data Assistant access to our docs. Users can now ask the AI any questions about how to use the Basejump AI app.
+- :world_map: We're introducing guided tutorials which will help new users understand how to use our app.
+
+### Summary
+The primary focus was adding visualizations and our product hunt launch. So many great features were added in addition to visualizations, such as the internal docs tool for the AI, SSL support (for HIPAA compliance), and improved onboarding for new users via data objects.
+
+### Highlights
+- Added visualizations, internal docs tool, stop chat feature, and updated demo account creation w/data objects
+- Focus on this release was adding SSL support with required as the minimum + fixing visualization-related bugs
+
+### API Release
+
+==- API
+**Release v0.29.0**
+
+_February 4, 2025_
+
+### Features
+- Updated stop chat to send webhook messages indicated chat has been stopped
+- Added data objects to be created on account creation
+- Added internal docs tool to the Basejump agent
+- Added visualization support! 📊
+- Enforcing SSL required to enforce encrypted connections for improved security + HIPAA compliance
+
+#### New Endpoints
+- Added DB test endpoint POST /connection/database/test/
+- DELETE /result/saved/{saved_result_uuid}/
+- POST /result/save/{saved_result_uuid}/
+  - Notice this is just called save as opposed to all the other endpoints using saved
+
+### Bugs
+- Updated the create_chat endpoint to not allow chats created by those who don't belong to the team being passed in
+- Updated code to throw error if there is a DB alias conflict
+
+### Breaking Changes
+- Result objects changed the name of the titles, subtitles, and descriptions to use a 'result_' prefix
+- All of the result endpoints have changed. Most have been changed to focus on saved results as opposed to results or visual results. There are now 3 classifications of results (each with their own uuid):
+  - saved_result_uuid: This is a result that was saved using POST /result/save/
+  - result_uuid: This is the initial SQL query results. It is not part of a saved result until it is saved via the POST endpoint mentioned above
+  - visual_result_uuid: This is the visualization related to the result_uuid. Visual results and data results (aka results) both can be used to created a saved result
+
+#### Changed Endpoints
+- GET /result/visual/{visual_result_uuid}/ -> DELETED
+  - This was deleted
+POST /result/visual/search/ -> DELETED
+  - This was deleted
+- POST /result/search/ -> POST /result/saved/search/
+  - Renamed to POST /result/saved/search/
+- PUT /result/{result_uuid}/ -> PUT /result/saved/{saved_result_uuid}/
+  - Renamed to /result/saved/{saved_result_uuid}/
+  - Removed the 'saved_result' option in the body. To save a result, you now must use the POST /result/save/- {saved_result_uuid}/ endpoint
+- Removed drivername from POST /connection/database/
+  - This is something configured server-side
+- Any endpoints returning the GetResultHistory schema object now have an 'orphan_type'. This has two values: one for orphaned results due to connections being deleted, and the other due to teams being deleted
+  - DELETE `/result/{result_uuid}/
+  - GET /result/{result_uuid}/
+  - PUT /result/{result_uuid}/  
+===
+
 ## Redesigned Data Page, Free Accounts, Documentation, Community, and API Release
 _January 14, 2025_
 
@@ -15,13 +83,13 @@ There were so many changes this release! We're proud of all the changes that we 
 
 Our data page has been redesigned along with anywhere else there is a data object throughout the app. This is what the next data page looks like:
 
-![Redesigned data page](images/data/data_page_2025_01_14.png)
+![Redesigned data page](/images/data/data_page_2025_01_14.png)
 
 We focused on designing the data page to have a modern feel that also highlights the data at the top of the data tile. We set the default to the tile view to make it easy to see your metrics at a glance. 
 
 The color of each tile indicates whether the data object is a metric (green), record (orange), or dataset (purple). We also added icons in the tabular view that represent each of these three data object types.
 
-![Redesigned data tabular page](images/data/data_tabular_page_2025_01_14.png)
+![Redesigned data tabular page](/images/data/data_tabular_page_2025_01_14.png)
 
 The redesign should make it easier to browse the various data objects that have been retrieved from the Basejump data agent.
 
@@ -34,7 +102,7 @@ There was a huge focus on getting our documentation improved to make using our a
 
 The interactive tutorial can be activated by clicking the 'Tutorials' toggle under the profile drop-down menu. A graduation cap will appear in the header with relevant tutorials that the User can explore. 
 
-![Interactive tutorials](images/interactive_tutorials_2025_01_14.png)
+![Interactive tutorials](/images/interactive_tutorials_2025_01_14.png)
 
 ### Free Tier
 

@@ -1,5 +1,9 @@
 # Quickstart
 
+Welcome to the Basejump AI quickstart! This video below gives a quick introduction on using the app:
+
+[!embed](https://www.youtube.com/watch?v=mFXwVtsyWTk&ab_channel=BasejumpAI)
+
 When you first log in, you will start on the data page. The data page is initially blank. Here is what the data page looks like once data has been retrieved.
 
 ![The Data page](/images/data/data_page.png)
@@ -20,7 +24,7 @@ You see that two database sources have already been added, the `HR Database` and
 
 ![Adding a database](/images/datasources/add_database_modal.png)
 
-2. Fill in your database credentials in the modal window. To include any additional schemas besides the default schema, add them in the 'Accessible Schemas'. For more information on creating templated schemas using Jinja, refer to the 'Datasources' page
+2. Fill in your database credentials in the modal window. To include any additional schemas besides the default schema, add them in the 'Accessible Schemas'. For more information on creating templated schemas using Jinja, refer to the 'Datasources' page. The database role you provide needs to have a SELECT permission to the tables you want to give access.
 
 [!ref](/sidebar-options/administrator-options/datasources.md)
 

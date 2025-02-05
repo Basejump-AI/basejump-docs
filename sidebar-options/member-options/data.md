@@ -4,7 +4,7 @@
 
 The data page is the home page of our app for good reason! This page contains all of the saved data objects retrieved from chatting with the AI.
 
-The data apge contains the three data object types:
+The data page contains the three data object types:
 - Metrics
 - Records
 - Datasets
