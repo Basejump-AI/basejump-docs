@@ -22,9 +22,11 @@ The primary focus was adding visualizations and our product hunt launch. So many
 ### API Release
 
 ==- API
-**Release v0.29.0**
+**Release v1.0.0**
 
 _February 4, 2025_
+
+![Visualization example](/images/changelog/bar_chart_2025_02_07.png)
 
 ### Features
 - Updated stop chat to send webhook messages indicated chat has been stopped
@@ -83,13 +85,13 @@ There were so many changes this release! We're proud of all the changes that we 
 
 Our data page has been redesigned along with anywhere else there is a data object throughout the app. This is what the next data page looks like:
 
-![Redesigned data page](/images/data/data_page_2025_01_14.png)
+![Redesigned data page](/images/changelog/data_page_2025_01_14.png)
 
 We focused on designing the data page to have a modern feel that also highlights the data at the top of the data tile. We set the default to the tile view to make it easy to see your metrics at a glance. 
 
 The color of each tile indicates whether the data object is a metric (green), record (orange), or dataset (purple). We also added icons in the tabular view that represent each of these three data object types.
 
-![Redesigned data tabular page](/images/data/data_tabular_page_2025_01_14.png)
+![Redesigned data tabular page](/images/changelog/data_tabular_page_2025_01_14.png)
 
 The redesign should make it easier to browse the various data objects that have been retrieved from the Basejump data agent.
 
@@ -102,7 +104,7 @@ There was a huge focus on getting our documentation improved to make using our a
 
 The interactive tutorial can be activated by clicking the 'Tutorials' toggle under the profile drop-down menu. A graduation cap will appear in the header with relevant tutorials that the User can explore. 
 
-![Interactive tutorials](/images/interactive_tutorials_2025_01_14.png)
+![Interactive tutorials](/images/changelog/interactive_tutorials_2025_01_14.png)
 
 ### Free Tier
 
