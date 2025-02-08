@@ -15,6 +15,8 @@ We are proud to be launching on Product Hunt again for this release! The last ti
 ### Summary
 The primary focus was adding visualizations and our product hunt launch. So many great features were added in addition to visualizations, such as the internal docs tool for the AI, SSL support (for HIPAA compliance), and improved onboarding for new users via data objects.
 
+![Visualization example](/images/changelog/bar_chart_2025_02_07.png)
+
 ### Highlights
 - Added visualizations, internal docs tool, stop chat feature, and updated demo account creation w/data objects
 - Focus on this release was adding SSL support with required as the minimum + fixing visualization-related bugs
@@ -25,8 +27,6 @@ The primary focus was adding visualizations and our product hunt launch. So many
 **Release v1.0.0**
 
 _February 4, 2025_
-
-![Visualization example](/images/changelog/bar_chart_2025_02_07.png)
 
 ### Features
 - Updated stop chat to send webhook messages indicated chat has been stopped
