@@ -21,6 +21,8 @@ The AI is able to produce visualizations in addition to data objects. The follow
 
 ![Visualization example](/images/chat/viz_chat_example.png)
 
+Visualizations are created using the Plotly open source library. 
+
 ## Auditing the AI output
 
 After providing your prompt, the user is able to see the AI's thoughts in real-time. This helps the User understand the thought process the AI went through to reach its conclusion and helps the User audit the result. 

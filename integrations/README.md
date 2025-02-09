@@ -20,6 +20,8 @@ Verify full is most secure since it not only encrypts the connection and verifie
 
 SSL is no longer in use and has been replaced with TLS, however, SSL is still commonly used to refer to an encrypted connection. All references to SSL throughout this documentation are referring to a TLS connection.
 
+For more advanced encryption options such as mTSL or SSH tunneling, please contact us.
+
 # Setting up an Encrypted Connection
 
 When on the datasources page, click 'Add Database' to add a connection. You will see the SSL Mode dropdown that allows you to set your level of preferred protection.
