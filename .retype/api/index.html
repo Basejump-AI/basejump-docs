@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.792362235163">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.792709046104">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -31,11 +31,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../images/favicon.png" rel="icon">
-    <link href="../resources/css/retype.css?v=3.6.0.792362235163" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.6.0.792709046104" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.792362235163" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.792709046104" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.792362235163" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.792709046104" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -183,9 +183,8 @@
         <span>Versioning and Releases</span>
     </h2>
 </doc-anchor-target>
-<p>As releases are made, we will make announcements on our various social media platforms as well as via our newsletter. We use semantic versioning for our releases, which is displayed at the top of our API documentation linked above. Semantic versioning follows a standard of <major update>.<minor update>.<patch>.</p>
-<p>The API endpoints include the API version in their endpoint paths. While the API is still in beta (i.e. less than 1.0.0). the endpoints will include all 3 semantic version numbers (e.g. version 0.27.0 will be v0_27_0). Once the API is out of beta, we will only the first 2 sections (i.e. major and minor updates). While the API is in beta, the patch section represents both minor and patch releases.</p>
-<p>We will only support the latest 3 API releases at any given time (the latest release + 2 prior releases). We will provide deprecation warnings to anyone that has not upgraded to a new API version that the prior version will soon be deprecated. The frequency of releases will be greater while in beta. ONce out of beta, the releases will not be as frequent.</p>
+<p>As releases are made, we will make announcements on our various social media platforms as well as via our newsletter. We use semantic versioning for our releases internally, however, the API will just refer to the major version (v1, v2, etc...). The API endpoints include the API version in their endpoint paths.</p>
+<p>We will only support, at most, the latest 2 API releases at any given time. We will provide deprecation warnings to anyone that has not upgraded to a new API version that the prior version will soon be deprecated.</p>
 
                                 
                                 <!-- Required only on API pages -->

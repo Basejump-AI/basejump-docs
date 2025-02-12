@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.792362235163">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.792709046104">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -33,11 +33,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../images/favicon.png" rel="icon">
-    <link href="../resources/css/retype.css?v=3.6.0.792362235163" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.6.0.792709046104" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.792362235163" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.792709046104" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.792362235163" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.792709046104" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -198,6 +198,7 @@
 </ul>
 <p>Verify full is most secure since it not only encrypts the connection and verifies the certificate, but also confirms the user is connecting to the correct source, which protects against man-in-the-middle attacks. However, this does come with some additional latency. We borrowed these classifications from the Postgres SSL definitions found <a href="https://www.postgresql.org/docs/current/libpq-ssl.html">here</a> and standardized these same three categories to all of our database connections.</p>
 <p>SSL is no longer in use and has been replaced with TLS, however, SSL is still commonly used to refer to an encrypted connection. All references to SSL throughout this documentation are referring to a TLS connection.</p>
+<p>For more advanced encryption options such as mTSL or SSH tunneling, please contact us.</p>
 <doc-anchor-target id="setting-up-an-encrypted-connection">
     <h1>
         <doc-anchor-trigger class="header-anchor-trigger" to="#setting-up-an-encrypted-connection">#</doc-anchor-trigger>
