@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.792709046104">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.793233297306">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -31,11 +31,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../images/favicon.png" rel="icon">
-    <link href="../resources/css/retype.css?v=3.6.0.792709046104" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.6.0.793233297306" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.792709046104" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.793233297306" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.792709046104" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.793233297306" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.6.0.793233297306" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -185,6 +186,123 @@
 </doc-anchor-target>
 <p>As releases are made, we will make announcements on our various social media platforms as well as via our newsletter. We use semantic versioning for our releases internally, however, the API will just refer to the major version (v1, v2, etc...). The API endpoints include the API version in their endpoint paths.</p>
 <p>We will only support, at most, the latest 2 API releases at any given time. We will provide deprecation warnings to anyone that has not upgraded to a new API version that the prior version will soon be deprecated.</p>
+<doc-anchor-target id="quickstart-example">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#quickstart-example">#</doc-anchor-trigger>
+        <span>Quickstart example</span>
+    </h2>
+</doc-anchor-target>
+<p>This example illustrates how to create a new user, request an access token, connect your database, and then ask a question.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-python"><code v-pre class="language-python">import os
+import requests
+
+base_url = &quot;https://api.basejump.ai/api/v1&quot;
+
+# Create an ADMIN user
+response = requests.post(
+    url=base_url + &quot;/account/user/&quot;,
+    params={
+        &quot;username&quot;: &quot;new_user&quot;,
+        &quot;role&quot;: &quot;ADMIN&quot;,
+    },
+    headers={&quot;client-secret&quot;: os.environ[&quot;API_KEY&quot;]},
+)
+assert response.status_code == 200
+response_dict = response.json()
+user_uuid = response_dict[&quot;user_uuid&quot;]
+
+# Get the refresh token
+response = requests.post(
+    url=base_url + &quot;/auth/token/&quot;,
+    params={
+        &quot;user_uuid&quot;: user_uuid,
+    },
+    headers={&quot;client-secret&quot;: os.environ[&quot;API_KEY&quot;]},
+)
+assert response.status_code == 200
+new_refresh_token = response.json()[&quot;refresh_token&quot;]
+
+# Get the access token
+headers = {
+    &quot;Authorization&quot;: f&quot;Bearer {new_refresh_token}&quot;,
+    &quot;Content-Type&quot;: &quot;application/json&quot;,
+}
+response = requests.post(
+    url=base_url + &quot;/auth/access_token/&quot;,
+    params={&quot;user_uuid&quot;: user_uuid},
+    headers=headers,
+)
+assert response.status_code == 200
+access_token = response.json()[&quot;access_token&quot;]
+headers = {
+    &quot;Authorization&quot;: f&quot;Bearer {access_token}&quot;,
+    &quot;Content-Type&quot;: &quot;application/json&quot;,
+}
+
+# Create a team
+response = requests.post(
+    url=base_url + &quot;/account/team/&quot;,
+    params={&quot;team_name&quot;: &quot;pytest_team&quot;},
+    headers=headers,
+)
+assert response.status_code == 200
+response_dict = response.json()
+team_uuid = response_dict[&quot;team_uuid&quot;]
+
+# Add a database connection to index
+conn_params = {
+    &quot;database_type&quot;: &quot;postgres&quot;,
+    &quot;username&quot;: os.environ[&quot;HR_DEMO_DB_USER&quot;],
+    &quot;password&quot;: os.environ[&quot;HR_DEMO_DB_PASSWORD&quot;],
+    &quot;host&quot;: os.environ[&quot;DEMO_DB_HOST&quot;],
+    &quot;port&quot;: int(os.environ[&quot;DEMO_DB_PORT&quot;]),
+    &quot;database_name&quot;: os.environ[&quot;HR_DEMO_DB_NAME&quot;],
+    &quot;query&quot;: {},
+    &quot;schemas&quot;: [{&quot;schema_nm&quot;: &quot;hr_demo_db&quot;}],
+    &quot;data_source_desc&quot;: &quot;&quot;&quot;
+        A select only role for the HR demo database.
+&quot;&quot;&quot;,
+    &quot;ssl_mode&quot;: &quot;require&quot;,
+    &quot;database_desc&quot;: &quot;&quot;&quot;
+        Human Resources (HR) demo database with employee and dependent information.
+&quot;&quot;&quot;,
+    &quot;include_default_schema&quot;: False,
+}
+response = requests.post(
+    url=base_url + &quot;/connection/database/&quot;,
+    json=conn_params,
+    headers=headers,
+)
+assert response.status_code == 200
+conn_uuid = response.json()[&quot;conn_uuid&quot;]
+db_uuid = response.json()[&quot;db_uuid&quot;]
+
+# Add team to connection
+response = requests.post(
+    url=base_url + f&quot;/connection/{conn_uuid}/team/&quot;,
+    json={&quot;team_uuids&quot;: [team_uuid]},
+    headers=headers,
+)
+assert response.status_code == 200
+
+# Add user to team
+response = requests.post(url=base_url + f&quot;/account/user/{user_uuid}/team/{team_uuid}/&quot;, headers=headers)
+assert response.status_code == 200
+
+# Create a chat
+response = requests.post(url=base_url + f&quot;/chat/team/{team_uuid}/&quot;, headers=headers)
+assert response.status_code == 200
+chat_uuid = response.json()[&quot;chat_uuid&quot;]
+
+# Ask the AI a question about your data
+response = requests.post(
+    url=base_url + f&quot;/chat/{chat_uuid}/message/&quot;,
+    headers=headers,
+    json={&quot;prompt&quot;: &quot;How many employees are there?&quot;},
+)
+print(response.text)</code></pre>
+</doc-codeblock></div>
 
                                 
                                 <!-- Required only on API pages -->
@@ -257,6 +375,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "API", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "API", level: 1, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
