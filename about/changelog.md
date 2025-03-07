@@ -1,6 +1,83 @@
 # Changelog
 
 
+## AI Generated, Human Verified
+_March 6, 2025_
+
+This launch is all about improving the trust that users have in the results that they are getting from the Basejump AI application. 
+
+## TLDR
+- :white_check_mark: Users can mark results as verified, which will then be returned to other users for semantically similar queries.
+
+### Summary
+
+Users can now mark a result as 'verified'. When Users mark a result as verified, it will add a checkmark to the result. 
+
+![Verified result example](/images/changelog/verified_result_2025_03_06.png)
+
+### Verified Results
+
+Verifying a result will add that result to the cache, which means it will return instantly for other users once it has been added. These verified results can also be unverified if another user disagrees that this information looks correct. However, a user has to be at the same RBAC role level or greater as the other user to unverify. For example, if the user is a Member, they can't unverify an Admin's verified result.
+
+There are 2 types of semantically similar results that can be returned in the cache:
+- Identical: These results will return the same information as was originally cached if it is current within the last day. If it is older than 1 day, then the result is refreshed.
+- Similar: These results will return different information, but the SQL query only differs in the where clause being applied. For example, if someone asks 'how many bagels are there?' and someone else asks, 'how many sesame seed bagels are there', the 2nd query is similar enough to be verified (we know how to count bagels), but will be updated to filter to sesame seed bagels only.
+
+Other details to be aware of:
+- If a verified result is returned and is older than 1 day, the SQL query is re-ran in order get the latest information. 
+- The checkmark symbol used to indicate if a result is verified is outlined if it was by a Member and solid if it was verified by an Admin
+- An Admin can confirm the verification of a Member to promote that verification to an admin
+
+Verified results is a great initial step to getting common consensus around common metrics. Every time a result is returned, users can verify the output and other members will get the same query ran for them as well.
+
+#### Security Implications
+
+Identical verified results are only returned for users who share a database connection through their teams. Similar results are only returned for an organization if two users share the same database, but not necessarily the same connection. This is important for situations where Users rely on jinjafied schemas. The query is re-ran to get the information relevant to the other user's connection, but the query itself remains verified.
+
+This setup ensures that only those who have access to shared connections are able to view semantically similar information and keeps the data secure.
+
+### API Release
+
+==- API
+**Release v1.0.0**
+
+_March 6, 2025_
+
+### Features
+- Added verification feature and semantic caching
+- Added changing storage location via API
+
+
+#### New Endpoints
+- update_verify_mode `PUT /account/client/verify_mode/`
+  - This endpoint allows you to change the verify mode. 
+  - Verify modes control what the users are able to see.
+    - STRICT means only results with similarly previously verified outputs will be returned.
+    - EXPLORE means any result can be returned.
+    - Both modes show verify status for all results regardless.
+- get_client `GET /account/client/`
+  - See the verify mode, client name, and client UUID
+- setup_client_storage `POST /connection/storage/`
+  - Connect S3 storage for storing results from the AI
+- get_client_s3_conn `GET /connection/storage/`
+  - Connect a client's S3 bucket to the database for storing results from chatting with the AI
+- Update result `PUT /result/{result_uuid}/
+  - Update a result. This endpoint currently is only for updating the verification status of a result.
+More parameters to update will likely be added in the future.
+
+### Bugs
+- Fixed uncaptured timeout error for chats
+- Fixed only top 10 tables being used for ERD diagram
+- Fixed queries for other connections with jinja values not executing due to unresolved jinja
+
+### Breaking Changes
+- 1 breaking change for a changed endpoint
+
+#### Changed Endpoints 
+- save_result `POST /result/save/
+  - Added the team_uuid, verified, and verified_user_uuid fields
+===
+
 ## Visualizations, HIPAA Compliance, AI Internal Docs Tool, and New User Experience
 _February 4, 2025_
 
@@ -24,7 +101,7 @@ The primary focus was adding visualizations and our product hunt launch. So many
 ### API Release
 
 ==- API
-**Release v1.0.0**
+**Release v0.29.0**
 
 _February 4, 2025_
 

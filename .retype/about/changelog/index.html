@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.793233297306">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.794638671408">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -11,7 +11,7 @@
     <!-- Primary Meta Tags -->
     <title>Changelog</title>
     <meta name="title" content="Changelog">
-    <meta name="description" content="February 4, 2025">
+    <meta name="description" content="March 6, 2025">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://basejump.ai/about/changelog/">
@@ -20,24 +20,24 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://basejump.ai/about/changelog/">
     <meta property="og:title" content="Changelog">
-    <meta property="og:description" content="February 4, 2025">
-    <meta property="og:image" content="https://basejump.ai/images/changelog/bar_chart_2025_02_07.png">
+    <meta property="og:description" content="March 6, 2025">
+    <meta property="og:image" content="https://basejump.ai/images/changelog/verified_result_2025_03_06.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://basejump.ai/about/changelog/">
     <meta property="twitter:title" content="Changelog">
-    <meta property="twitter:description" content="February 4, 2025">
-    <meta property="twitter:image" content="https://basejump.ai/images/changelog/bar_chart_2025_02_07.png">
+    <meta property="twitter:description" content="March 6, 2025">
+    <meta property="twitter:image" content="https://basejump.ai/images/changelog/verified_result_2025_03_06.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../images/favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.6.0.793233297306" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.794638671408" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.793233297306" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.794638671408" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.793233297306" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.794638671408" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -176,6 +176,157 @@
         <span>Changelog</span>
     </h1>
 </doc-anchor-target>
+<doc-anchor-target id="ai-generated-human-verified">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#ai-generated-human-verified">#</doc-anchor-trigger>
+        <span>AI Generated, Human Verified</span>
+    </h2>
+</doc-anchor-target>
+<p><em>March 6, 2025</em></p>
+<p>This launch is all about improving the trust that users have in the results that they are getting from the Basejump AI application.</p>
+<doc-anchor-target id="tldr">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tldr">#</doc-anchor-trigger>
+        <span>TLDR</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li><span class="docs-emoji">&#x2705;</span> Users can mark results as verified, which will then be returned to other users for semantically similar queries.</li>
+</ul>
+<doc-anchor-target id="summary">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#summary">#</doc-anchor-trigger>
+        <span>Summary</span>
+    </h3>
+</doc-anchor-target>
+<p>Users can now mark a result as &#x27;verified&#x27;. When Users mark a result as verified, it will add a checkmark to the result.</p>
+<p><figure class="content-center">
+    <img src="../../images/changelog/verified_result_2025_03_06.png" alt="Verified result example">
+    <figcaption class="caption">Verified result example</figcaption>
+</figure>
+</p>
+<doc-anchor-target id="verified-results">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#verified-results">#</doc-anchor-trigger>
+        <span>Verified Results</span>
+    </h3>
+</doc-anchor-target>
+<p>Verifying a result will add that result to the cache, which means it will return instantly for other users once it has been added. These verified results can also be unverified if another user disagrees that this information looks correct. However, a user has to be at the same RBAC role level or greater as the other user to unverify. For example, if the user is a Member, they can&#x27;t unverify an Admin&#x27;s verified result.</p>
+<p>There are 2 types of semantically similar results that can be returned in the cache:</p>
+<ul>
+<li>Identical: These results will return the same information as was originally cached if it is current within the last day. If it is older than 1 day, then the result is refreshed.</li>
+<li>Similar: These results will return different information, but the SQL query only differs in the where clause being applied. For example, if someone asks &#x27;how many bagels are there?&#x27; and someone else asks, &#x27;how many sesame seed bagels are there&#x27;, the 2nd query is similar enough to be verified (we know how to count bagels), but will be updated to filter to sesame seed bagels only.</li>
+</ul>
+<p>Other details to be aware of:</p>
+<ul>
+<li>If a verified result is returned and is older than 1 day, the SQL query is re-ran in order get the latest information.</li>
+<li>The checkmark symbol used to indicate if a result is verified is outlined if it was by a Member and solid if it was verified by an Admin</li>
+<li>An Admin can confirm the verification of a Member to promote that verification to an admin</li>
+</ul>
+<p>Verified results is a great initial step to getting common consensus around common metrics. Every time a result is returned, users can verify the output and other members will get the same query ran for them as well.</p>
+<doc-anchor-target id="security-implications">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#security-implications">#</doc-anchor-trigger>
+        <span>Security Implications</span>
+    </h4>
+</doc-anchor-target>
+<p>Identical verified results are only returned for users who share a database connection through their teams. Similar results are only returned for an organization if two users share the same database, but not necessarily the same connection. This is important for situations where Users rely on jinjafied schemas. The query is re-ran to get the information relevant to the other user&#x27;s connection, but the query itself remains verified.</p>
+<p>This setup ensures that only those who have access to shared connections are able to view semantically similar information and keeps the data secure.</p>
+<doc-anchor-target id="api-release">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#api-release">#</doc-anchor-trigger>
+        <span>API Release</span>
+    </h3>
+</doc-anchor-target>
+<doc-panel id="api" collapsed>
+    <template #title>API</template>
+<p><strong>Release v1.0.0</strong></p>
+<p><em>March 6, 2025</em></p>
+<doc-anchor-target id="features">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#features">#</doc-anchor-trigger>
+        <span>Features</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Added verification feature and semantic caching</li>
+<li>Added changing storage location via API</li>
+</ul>
+<doc-anchor-target id="new-endpoints">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-endpoints">#</doc-anchor-trigger>
+        <span>New Endpoints</span>
+    </h4>
+</doc-anchor-target>
+<ul>
+<li>update_verify_mode <code v-pre>PUT /account/client/verify_mode/</code>
+<ul>
+<li>This endpoint allows you to change the verify mode.</li>
+<li>Verify modes control what the users are able to see.
+<ul>
+<li>STRICT means only results with similarly previously verified outputs will be returned.</li>
+<li>EXPLORE means any result can be returned.</li>
+<li>Both modes show verify status for all results regardless.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>get_client <code v-pre>GET /account/client/</code>
+<ul>
+<li>See the verify mode, client name, and client UUID</li>
+</ul>
+</li>
+<li>setup_client_storage <code v-pre>POST /connection/storage/</code>
+<ul>
+<li>Connect S3 storage for storing results from the AI</li>
+</ul>
+</li>
+<li>get_client_s3_conn <code v-pre>GET /connection/storage/</code>
+<ul>
+<li>Connect a client&#x27;s S3 bucket to the database for storing results from chatting with the AI</li>
+</ul>
+</li>
+<li>Update result &#x60;PUT /result//
+<ul>
+<li>Update a result. This endpoint currently is only for updating the verification status of a result.
+More parameters to update will likely be added in the future.</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="bugs">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bugs">#</doc-anchor-trigger>
+        <span>Bugs</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Fixed uncaptured timeout error for chats</li>
+<li>Fixed only top 10 tables being used for ERD diagram</li>
+<li>Fixed queries for other connections with jinja values not executing due to unresolved jinja</li>
+</ul>
+<doc-anchor-target id="breaking-changes">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#breaking-changes">#</doc-anchor-trigger>
+        <span>Breaking Changes</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>1 breaking change for a changed endpoint</li>
+</ul>
+<doc-anchor-target id="changed-endpoints">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#changed-endpoints">#</doc-anchor-trigger>
+        <span>Changed Endpoints</span>
+    </h4>
+</doc-anchor-target>
+<ul>
+<li>save_result &#x60;POST /result/save/
+<ul>
+<li>Added the team_uuid, verified, and verified_user_uuid fields</li>
+</ul>
+</li>
+</ul>
+</doc-panel>
 <doc-anchor-target id="visualizations-hipaa-compliance-ai-internal-docs-tool-and-new-user-experience">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#visualizations-hipaa-compliance-ai-internal-docs-tool-and-new-user-experience">#</doc-anchor-trigger>
@@ -184,9 +335,9 @@
 </doc-anchor-target>
 <p><em>February 4, 2025</em></p>
 <p>We are proud to be launching on Product Hunt again for this release! The last time we launched on Product Hunt was Sept. 2024 and so much has changed since then.</p>
-<doc-anchor-target id="tldr">
+<doc-anchor-target id="tldr-1">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#tldr">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tldr-1">#</doc-anchor-trigger>
         <span>TLDR</span>
     </h3>
 </doc-anchor-target>
@@ -196,9 +347,9 @@
 <li><span class="docs-emoji">&#x1F527;</span> We gave our AI Data Assistant access to our docs. Users can now ask the AI any questions about how to use the Basejump AI app.</li>
 <li><span class="docs-emoji">&#x1F5FA;&#xFE0F;</span> We&#x27;re introducing guided tutorials which will help new users understand how to use our app.</li>
 </ul>
-<doc-anchor-target id="summary">
+<doc-anchor-target id="summary-1">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#summary">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#summary-1">#</doc-anchor-trigger>
         <span>Summary</span>
     </h3>
 </doc-anchor-target>
@@ -218,19 +369,19 @@
 <li>Added visualizations, internal docs tool, stop chat feature, and updated demo account creation w/data objects</li>
 <li>Focus on this release was adding SSL support with required as the minimum + fixing visualization-related bugs</li>
 </ul>
-<doc-anchor-target id="api-release">
+<doc-anchor-target id="api-release-1">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#api-release">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#api-release-1">#</doc-anchor-trigger>
         <span>API Release</span>
     </h3>
 </doc-anchor-target>
 <doc-panel id="api" collapsed>
     <template #title>API</template>
-<p><strong>Release v1.0.0</strong></p>
+<p><strong>Release v0.29.0</strong></p>
 <p><em>February 4, 2025</em></p>
-<doc-anchor-target id="features">
+<doc-anchor-target id="features-1">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#features">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#features-1">#</doc-anchor-trigger>
         <span>Features</span>
     </h3>
 </doc-anchor-target>
@@ -241,9 +392,9 @@
 <li>Added visualization support! <span class="docs-emoji">&#x1F4CA;</span></li>
 <li>Enforcing SSL required to enforce encrypted connections for improved security + HIPAA compliance</li>
 </ul>
-<doc-anchor-target id="new-endpoints">
+<doc-anchor-target id="new-endpoints-1">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#new-endpoints">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-endpoints-1">#</doc-anchor-trigger>
         <span>New Endpoints</span>
     </h4>
 </doc-anchor-target>
@@ -256,9 +407,9 @@
 </ul>
 </li>
 </ul>
-<doc-anchor-target id="bugs">
+<doc-anchor-target id="bugs-1">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#bugs">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bugs-1">#</doc-anchor-trigger>
         <span>Bugs</span>
     </h3>
 </doc-anchor-target>
@@ -266,9 +417,9 @@
 <li>Updated the create_chat endpoint to not allow chats created by those who don&#x27;t belong to the team being passed in</li>
 <li>Updated code to throw error if there is a DB alias conflict</li>
 </ul>
-<doc-anchor-target id="breaking-changes">
+<doc-anchor-target id="breaking-changes-1">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#breaking-changes">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#breaking-changes-1">#</doc-anchor-trigger>
         <span>Breaking Changes</span>
     </h3>
 </doc-anchor-target>
@@ -282,9 +433,9 @@
 </ul>
 </li>
 </ul>
-<doc-anchor-target id="changed-endpoints">
+<doc-anchor-target id="changed-endpoints-1">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#changed-endpoints">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#changed-endpoints-1">#</doc-anchor-trigger>
         <span>Changed Endpoints</span>
     </h4>
 </doc-anchor-target>
@@ -329,9 +480,9 @@ POST /result/visual/search/ -&gt; DELETED</li>
 </doc-anchor-target>
 <p><em>January 14, 2025</em></p>
 <p>There were so many changes this release! We&#x27;re proud of all the changes that we managed to accomplish and share with all of you.</p>
-<doc-anchor-target id="tldr-1">
+<doc-anchor-target id="tldr-2">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#tldr-1">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tldr-2">#</doc-anchor-trigger>
         <span>TLDR</span>
     </h3>
 </doc-anchor-target>
@@ -404,9 +555,9 @@ POST /result/visual/search/ -&gt; DELETED</li>
 <li>Public API release</li>
 </ul>
 <p>The goal of all of these improvements it to get rapid feedback and involve the community with the Basejump AI application that we&#x27;re building. We would love your feedback and participation!</p>
-<doc-anchor-target id="api-release-1">
+<doc-anchor-target id="api-release-2">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#api-release-1">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#api-release-2">#</doc-anchor-trigger>
         <span>API Release</span>
     </h3>
 </doc-anchor-target>
@@ -415,9 +566,9 @@ POST /result/visual/search/ -&gt; DELETED</li>
     <template #title>API</template>
 <p><strong>Release v0.28.0</strong></p>
 <p><em>January 14, 2025</em></p>
-<doc-anchor-target id="summary-1">
+<doc-anchor-target id="summary-2">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#summary-1">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#summary-2">#</doc-anchor-trigger>
         <span>Summary</span>
     </h3>
 </doc-anchor-target>
@@ -439,9 +590,9 @@ POST /result/visual/search/ -&gt; DELETED</li>
 <li>Improved security and updated the documentation</li>
 <li>Improved RBAC controls for the API, added feature to stop AI thoughts, and updated the API docs</li>
 </ul>
-<doc-anchor-target id="breaking-changes-1">
+<doc-anchor-target id="breaking-changes-2">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#breaking-changes-1">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#breaking-changes-2">#</doc-anchor-trigger>
         <span>Breaking Changes</span>
     </h3>
 </doc-anchor-target>
