@@ -2,7 +2,7 @@
 
 Welcome to the Basejump AI roadmap! We share this roadmap so Users can see what we are working on and have coming down the pipeline soon.
 
-The considering section are items we are thinking about adding, to give your thoughts on what we should develop next, please go to our [Discord](https://discord.gg/fUucrZyP7D) and let us know!
+The considering section are items we are thinking about adding. To give your thoughts on what we should develop next, please go to our [Discord](https://discord.gg/fUucrZyP7D) and let us know!
 
 March 2025
 :   
@@ -15,7 +15,7 @@ March 2025
     - Adding join guarantees so the AI will only use the defined joins in the metadata when defined. This will the improve the AI accuracy.
 
 April 2025
-:
+:   
     - Add embedded chats.
     - Add Collections endpoints to the API.
     - Add AI model picker with other AI model options.
