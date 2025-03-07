@@ -19,6 +19,7 @@ April 2025
     - Add embedded chats.
     - Add Collections endpoints to the API.
     - Add AI model picker with other AI model options.
+    - Add caching for sub-prompts individual metrics as opposed to caching an entire composite prompt
 
 Considering
 :   
