@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.795028279649">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.795035605936">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -11,7 +11,7 @@
     <!-- Primary Meta Tags -->
     <title>Changelog</title>
     <meta name="title" content="Changelog">
-    <meta name="description" content="March 6, 2025">
+    <meta name="description" content="March 11, 2025">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://basejump.ai/about/changelog/">
@@ -20,24 +20,24 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://basejump.ai/about/changelog/">
     <meta property="og:title" content="Changelog">
-    <meta property="og:description" content="March 6, 2025">
-    <meta property="og:image" content="https://basejump.ai/images/changelog/verified_result_2025_03_06.png">
+    <meta property="og:description" content="March 11, 2025">
+    <meta property="og:image" content="https://basejump.ai/images/changelog/sql_server_and_snowflake_integrations_20250311.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://basejump.ai/about/changelog/">
     <meta property="twitter:title" content="Changelog">
-    <meta property="twitter:description" content="March 6, 2025">
-    <meta property="twitter:image" content="https://basejump.ai/images/changelog/verified_result_2025_03_06.png">
+    <meta property="twitter:description" content="March 11, 2025">
+    <meta property="twitter:image" content="https://basejump.ai/images/changelog/sql_server_and_snowflake_integrations_20250311.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../images/favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.6.0.795028279649" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.795035605936" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.795028279649" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.795035605936" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.795028279649" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.795035605936" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -176,6 +176,61 @@
         <span>Changelog</span>
     </h1>
 </doc-anchor-target>
+<doc-anchor-target id="new-integrations-snowflake-and-ms-sql-server">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-integrations-snowflake-and-ms-sql-server">#</doc-anchor-trigger>
+        <span>New Integrations: Snowflake and MS SQL Server</span>
+    </h2>
+</doc-anchor-target>
+<p><em>March 11, 2025</em></p>
+<p>We&#x27;re excited to add 2 new integrations this week: MS SQL Server and Snowflake!</p>
+<p><figure class="content-center">
+    <img src="../../images/changelog/sql_server_and_snowflake_integrations_20250311.png" alt="Snowflake and SQL Server integration announcement">
+    <figcaption class="caption">Snowflake and SQL Server integration announcement</figcaption>
+</figure>
+</p>
+<doc-anchor-target id="api-release">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#api-release">#</doc-anchor-trigger>
+        <span>API Release</span>
+    </h3>
+</doc-anchor-target>
+<doc-panel id="api" collapsed>
+    <template #title>API</template>
+<p><strong>Release v1.1.0</strong></p>
+<p><em>March 11, 2025</em></p>
+<doc-anchor-target id="features">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#features">#</doc-anchor-trigger>
+        <span>Features</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Added the SQL Server and Snowflake database integrations!</li>
+<li>Made the port field optional when connecting your database (providers like Snowflake don&#x27;t require it)</li>
+</ul>
+<doc-anchor-target id="bugs">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bugs">#</doc-anchor-trigger>
+        <span>Bugs</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Fixed inability to verify the demo objects</li>
+<li>Updated verification so any descendant verified result is unverified if the parent it came from or other descendants are unverified</li>
+<li>If foreign schemas for a given table weren&#x27;t included in the accepted list of schemas, it would previously throw an error. Now that relationship is ignored and fills in None values if that foreign schema is not available as part of the database connection setup.</li>
+<li>Child partitions are excluded from indexing for redshift and postgres</li>
+</ul>
+<doc-anchor-target id="breaking-changes">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#breaking-changes">#</doc-anchor-trigger>
+        <span>Breaking Changes</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>None</li>
+</ul>
+</doc-panel>
 <doc-anchor-target id="ai-generated-human-verified">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#ai-generated-human-verified">#</doc-anchor-trigger>
@@ -232,9 +287,9 @@
 </doc-anchor-target>
 <p>Identical verified results are only returned for users who share a database connection through their teams. Similar results are only returned for an organization if two users share the same database, but not necessarily the same connection. This is important for situations where Users rely on jinjafied schemas. The query is re-ran to get the information relevant to the other user&#x27;s connection, but the query itself remains verified.</p>
 <p>This setup ensures that only those who have access to shared connections are able to view semantically similar information and keeps the data secure.</p>
-<doc-anchor-target id="api-release">
+<doc-anchor-target id="api-release-1">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#api-release">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#api-release-1">#</doc-anchor-trigger>
         <span>API Release</span>
     </h3>
 </doc-anchor-target>
@@ -242,9 +297,9 @@
     <template #title>API</template>
 <p><strong>Release v1.0.0</strong></p>
 <p><em>March 6, 2025</em></p>
-<doc-anchor-target id="features">
+<doc-anchor-target id="features-1">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#features">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#features-1">#</doc-anchor-trigger>
         <span>Features</span>
     </h3>
 </doc-anchor-target>
@@ -293,9 +348,9 @@ More parameters to update will likely be added in the future.</li>
 </ul>
 </li>
 </ul>
-<doc-anchor-target id="bugs">
+<doc-anchor-target id="bugs-1">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#bugs">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bugs-1">#</doc-anchor-trigger>
         <span>Bugs</span>
     </h3>
 </doc-anchor-target>
@@ -304,9 +359,9 @@ More parameters to update will likely be added in the future.</li>
 <li>Fixed only top 10 tables being used for ERD diagram</li>
 <li>Fixed queries for other connections with jinja values not executing due to unresolved jinja</li>
 </ul>
-<doc-anchor-target id="breaking-changes">
+<doc-anchor-target id="breaking-changes-1">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#breaking-changes">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#breaking-changes-1">#</doc-anchor-trigger>
         <span>Breaking Changes</span>
     </h3>
 </doc-anchor-target>
@@ -369,9 +424,9 @@ More parameters to update will likely be added in the future.</li>
 <li>Added visualizations, internal docs tool, stop chat feature, and updated demo account creation w/data objects</li>
 <li>Focus on this release was adding SSL support with required as the minimum + fixing visualization-related bugs</li>
 </ul>
-<doc-anchor-target id="api-release-1">
+<doc-anchor-target id="api-release-2">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#api-release-1">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#api-release-2">#</doc-anchor-trigger>
         <span>API Release</span>
     </h3>
 </doc-anchor-target>
@@ -379,9 +434,9 @@ More parameters to update will likely be added in the future.</li>
     <template #title>API</template>
 <p><strong>Release v0.29.0</strong></p>
 <p><em>February 4, 2025</em></p>
-<doc-anchor-target id="features-1">
+<doc-anchor-target id="features-2">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#features-1">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#features-2">#</doc-anchor-trigger>
         <span>Features</span>
     </h3>
 </doc-anchor-target>
@@ -407,9 +462,9 @@ More parameters to update will likely be added in the future.</li>
 </ul>
 </li>
 </ul>
-<doc-anchor-target id="bugs-1">
+<doc-anchor-target id="bugs-2">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#bugs-1">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bugs-2">#</doc-anchor-trigger>
         <span>Bugs</span>
     </h3>
 </doc-anchor-target>
@@ -417,9 +472,9 @@ More parameters to update will likely be added in the future.</li>
 <li>Updated the create_chat endpoint to not allow chats created by those who don&#x27;t belong to the team being passed in</li>
 <li>Updated code to throw error if there is a DB alias conflict</li>
 </ul>
-<doc-anchor-target id="breaking-changes-1">
+<doc-anchor-target id="breaking-changes-2">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#breaking-changes-1">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#breaking-changes-2">#</doc-anchor-trigger>
         <span>Breaking Changes</span>
     </h3>
 </doc-anchor-target>
@@ -555,9 +610,9 @@ POST /result/visual/search/ -&gt; DELETED</li>
 <li>Public API release</li>
 </ul>
 <p>The goal of all of these improvements it to get rapid feedback and involve the community with the Basejump AI application that we&#x27;re building. We would love your feedback and participation!</p>
-<doc-anchor-target id="api-release-2">
+<doc-anchor-target id="api-release-3">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#api-release-2">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#api-release-3">#</doc-anchor-trigger>
         <span>API Release</span>
     </h3>
 </doc-anchor-target>
@@ -590,9 +645,9 @@ POST /result/visual/search/ -&gt; DELETED</li>
 <li>Improved security and updated the documentation</li>
 <li>Improved RBAC controls for the API, added feature to stop AI thoughts, and updated the API docs</li>
 </ul>
-<doc-anchor-target id="breaking-changes-2">
+<doc-anchor-target id="breaking-changes-3">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#breaking-changes-2">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#breaking-changes-3">#</doc-anchor-trigger>
         <span>Breaking Changes</span>
     </h3>
 </doc-anchor-target>

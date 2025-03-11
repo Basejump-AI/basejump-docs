@@ -1,5 +1,33 @@
 # Changelog
 
+## New Integrations: Snowflake and MS SQL Server
+_March 11, 2025_
+
+We're excited to add 2 new integrations this week: MS SQL Server and Snowflake!
+
+![Snowflake and SQL Server integration announcement](/images/changelog/sql_server_and_snowflake_integrations_20250311.png)
+
+### API Release
+
+==- API
+**Release v1.1.0**
+
+_March 11, 2025_
+
+### Features
+- Added the SQL Server and Snowflake database integrations!
+- Made the port field optional when connecting your database (providers like Snowflake don't require it)
+
+### Bugs
+- Fixed inability to verify the demo objects
+- Updated verification so any descendant verified result is unverified if the parent it came from or other descendants are unverified
+- If foreign schemas for a given table weren't included in the accepted list of schemas, it would previously throw an error. Now that relationship is ignored and fills in None values if that foreign schema is not available as part of the database connection setup.
+- Child partitions are excluded from indexing for redshift and postgres
+
+### Breaking Changes
+- None
+
+===
 
 ## AI Generated, Human Verified
 _March 6, 2025_

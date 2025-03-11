@@ -1,6 +1,6 @@
 {
   "version": "3.6.0",
-  "created": "2025-03-11T17:11:22Z",
+  "created": "2025-03-11T19:13:28Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -84,6 +84,9 @@
     },
     {
       "path": "images/changelog/interactive_tutorials_2025_01_14.png"
+    },
+    {
+      "path": "images/changelog/sql_server_and_snowflake_integrations_20250311.png"
     },
     {
       "path": "images/changelog/verified_result_2025_03_06.png"
