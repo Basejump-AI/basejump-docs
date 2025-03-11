@@ -47,7 +47,7 @@ Users can mark a result as 'verified'. When Users mark a result as verified, it 
 
 ![Verified result example](/images/chat/verified_result.png)
 
-Verifying a result will add that result to the cache, which means it will return instantly for other users once it has been added. These verified results can also be unverified if another user disagrees that this information looks correct. However, a user has to be at the same RBAC role level or greater as the other user to unverify. For example, if the user is a Member, they can't unverify an Admin's verified result.
+Verifying a result will add that result to the cache, which means it will return instantly for other users once it has been added. 
 
 There are 2 types of semantically similar results that can be returned in the cache:
 - Identical: These results will return the same information as was originally cached if it is current within the last day. If it is older than 1 day, then the result is refreshed.
@@ -59,6 +59,12 @@ Other details to be aware of:
 - An Admin can confirm the verification of a Member to promote that verification to an admin
 
 Verified results is a great initial step to getting common consensus around common metrics. Every time a result is returned, users can verify the output and other members will get the same query ran for them as well.
+
+#### Unverifying a Result
+
+These verified results can also be unverified if another user disagrees that this information looks correct. However, a user has to be at the same RBAC role level or greater as the other user to unverify. For example, if the user is a Member, they can't unverify an Admin's verified result.
+
+Once a result is unverified, prior verified results that were returned as verified based on that verified data object, will be unverified for anyone who received them. This ensure the highest level accuracy and agreement possible for human-verified information from the AI.
 
 #### Security Implications
 

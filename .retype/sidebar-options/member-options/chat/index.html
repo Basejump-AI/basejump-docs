@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.794639900102">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.795027525397">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -33,11 +33,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../images/favicon.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.794639900102" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.795027525397" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.794639900102" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.795027525397" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.794639900102" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.795027525397" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -247,7 +247,7 @@
     <figcaption class="caption">Verified result example</figcaption>
 </figure>
 </p>
-<p>Verifying a result will add that result to the cache, which means it will return instantly for other users once it has been added. These verified results can also be unverified if another user disagrees that this information looks correct. However, a user has to be at the same RBAC role level or greater as the other user to unverify. For example, if the user is a Member, they can&#x27;t unverify an Admin&#x27;s verified result.</p>
+<p>Verifying a result will add that result to the cache, which means it will return instantly for other users once it has been added.</p>
 <p>There are 2 types of semantically similar results that can be returned in the cache:</p>
 <ul>
 <li>Identical: These results will return the same information as was originally cached if it is current within the last day. If it is older than 1 day, then the result is refreshed.</li>
@@ -260,6 +260,14 @@
 <li>An Admin can confirm the verification of a Member to promote that verification to an admin</li>
 </ul>
 <p>Verified results is a great initial step to getting common consensus around common metrics. Every time a result is returned, users can verify the output and other members will get the same query ran for them as well.</p>
+<doc-anchor-target id="unverifying-a-result">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#unverifying-a-result">#</doc-anchor-trigger>
+        <span>Unverifying a Result</span>
+    </h4>
+</doc-anchor-target>
+<p>These verified results can also be unverified if another user disagrees that this information looks correct. However, a user has to be at the same RBAC role level or greater as the other user to unverify. For example, if the user is a Member, they can&#x27;t unverify an Admin&#x27;s verified result.</p>
+<p>Once a result is unverified, prior verified results that were returned as verified based on that verified data object, will be unverified for anyone who received them. This ensure the highest level accuracy and agreement possible for human-verified information from the AI.</p>
 <doc-anchor-target id="security-implications">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#security-implications">#</doc-anchor-trigger>

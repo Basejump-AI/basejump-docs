@@ -1,9 +1,11 @@
 # Integrations
 
-The Basejump AI platform currently integrates with 3 DBMS types:
-- Postgres
+The Basejump AI platform currently integrates with 5 DBMS types:
+- MS SQL Server
 - MySQL
+- Postgres
 - Redshift
+- Snowflake
 
 We can quickly add any integration listed on the [SQLAlchemy dialects](https://docs.sqlalchemy.org/en/20/dialects/) web page. To request a new integration be added, please email support@basejump.ai with the same email you used to create your account.
 

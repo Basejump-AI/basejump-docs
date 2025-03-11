@@ -1,6 +1,6 @@
 {
   "version": "3.6.0",
-  "created": "2025-03-07T05:18:22Z",
+  "created": "2025-03-11T16:58:47Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -239,6 +239,9 @@
       "path": "integrations/index.html"
     },
     {
+      "path": "integrations/ms_sql_server/index.html"
+    },
+    {
       "path": "integrations/mysql/index.html"
     },
     {
@@ -246,6 +249,9 @@
     },
     {
       "path": "integrations/redshift/index.html"
+    },
+    {
+      "path": "integrations/snowflake/index.html"
     },
     {
       "path": "resources/css/retype.css"
