@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.795027525397">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.795028279649">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -33,11 +33,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../images/favicon.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.795027525397" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.795028279649" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.795027525397" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.795028279649" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.795027525397" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.795028279649" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -223,6 +223,53 @@
     </h2>
 </doc-anchor-target>
 <p>The company display name and ID can be changed in this section.</p>
+<doc-anchor-target id="verify-mode">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#verify-mode">#</doc-anchor-trigger>
+        <span>Verify Mode</span>
+    </h3>
+</doc-anchor-target>
+<p>There are two verify modes available:</p>
+<ul>
+<li>EXPLORE</li>
+<li>STRICT</li>
+</ul>
+<p><figure class="content-center">
+    <img src="../../../images/company/verify_mode_option.png" alt="Verify mode options">
+    <figcaption class="caption">Verify mode options</figcaption>
+</figure>
+</p>
+<p>Each of these control how much leniency the AI has to retrieve results.</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Explore Mode</th>
+<th>Strict Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allows the AI to make it&#x27;s best attempt to retrieve the information. Verified results are returned, but that&#x27;s unverified (non-human reviewed) results can also be returned.</td>
+<td>Restricts the AI to only return information that has previously been reviewed and verified. This is for those who need a higher level of assurance and accuracy from what the AI is returning.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>More information about verification can be found here: 
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">Data Governance</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>../../../data-governance/</span>
+    </div>
+    <a href="../../../data-governance/" class="absolute block inset-0"></a>
+</div>
+</p>
 
                                 
                                 <!-- Required only on API pages -->

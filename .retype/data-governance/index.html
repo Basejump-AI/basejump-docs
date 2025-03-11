@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.795027525397">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.795028279649">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -33,11 +33,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../images/favicon.png" rel="icon">
-    <link href="../resources/css/retype.css?v=3.6.0.795027525397" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.6.0.795028279649" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.795027525397" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.795028279649" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.795027525397" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.795028279649" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -221,10 +221,10 @@
 </p>
 <p>We&#x27;re offering the capability for organizations to go from first principles and original data sources to curate unique insights for the business that will transform the business into a truly data-driven enterprise like never before. Data governance does not have to mean restricting which metrics can be used, but rather improved transparency on the data that is being used and shared.</p>
 <doc-anchor-target id="metadata">
-    <h1>
+    <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#metadata">#</doc-anchor-trigger>
         <span>Metadata</span>
-    </h1>
+    </h2>
 </doc-anchor-target>
 <p>A fundamental aspect of good data governance is documentation. We provide the option to add metadata to every table and column in your data and define how they relate to each other. This not only improve the documentation on your data sources, but also improves the context for the AI in order to retrieve the most relevant data.</p>
 <p><figure class="content-center">
@@ -233,10 +233,10 @@
 </figure>
 </p>
 <doc-anchor-target id="data-modeling">
-    <h1>
+    <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#data-modeling">#</doc-anchor-trigger>
         <span>Data Modeling</span>
-    </h1>
+    </h2>
 </doc-anchor-target>
 <p>In order to be most successful using the Basejump AI platform, the tables you provide need to be clear enough that you can document the relationships clearly. Not all tables in your database ned to be added to Basejump, just the most clean tables at the end of your ETL pipeline that you want to provide to users.</p>
 <p>The relationships you define will be shown as an ERD diagram in our &#x27;Explore&#x27; page to help users understand relationships between tables.</p>
@@ -260,6 +260,53 @@
     <a href="../sidebar-options/member-options/explore/" class="absolute block inset-0"></a>
 </div>
 </p>
+<doc-anchor-target id="verification">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#verification">#</doc-anchor-trigger>
+        <span>Verification</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="verified-results">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#verified-results">#</doc-anchor-trigger>
+        <span>Verified Results</span>
+    </h3>
+</doc-anchor-target>
+<p>Users can mark a result as &#x27;verified&#x27;. When Users mark a result as verified, it will add a checkmark to the result. Verification indicates that the user has reviewed the output and verifies that it is correct.</p>
+<p><figure class="content-center">
+    <img src="../images/chat/verified_result.png" alt="Verified result example">
+    <figcaption class="caption">Verified result example</figcaption>
+</figure>
+</p>
+<p>Verifying a result will add that result to the cache, which means it will return instantly for other users once it has been added.</p>
+<p>There are 2 types of semantically similar results that can be returned in the cache:</p>
+<ul>
+<li>Identical: These results will return the same information as was originally cached if it is current within the last day. If it is older than 1 day, then the result is refreshed.</li>
+<li>Similar: These results will return different information, but the SQL query only differs in the where clause being applied. For example, if someone asks &#x27;how many bagels are there?&#x27; and someone else asks, &#x27;how many sesame seed bagels are there&#x27;, the 2nd query is similar enough to be verified (we know how to count bagels), but will be updated to filter to sesame seed bagels only.</li>
+</ul>
+<p>Other details to be aware of:</p>
+<ul>
+<li>If a verified result is returned and is older than 1 day, the SQL query is re-ran in order get the latest information.</li>
+<li>The checkmark symbol used to indicate if a result is verified is outlined if it was by a Member and solid if it was verified by an Admin</li>
+<li>An Admin can confirm the verification of a Member to promote that verification to an admin</li>
+</ul>
+<p>Verified results is a great initial step to getting common consensus around common metrics. Every time a result is returned, users can verify the output and other members will get the same query ran for them as well.</p>
+<doc-anchor-target id="unverifying-a-result">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#unverifying-a-result">#</doc-anchor-trigger>
+        <span>Unverifying a Result</span>
+    </h3>
+</doc-anchor-target>
+<p>These verified results can also be unverified if another user disagrees that this information looks correct. However, a user has to be at the same RBAC role level or greater as the other user to unverify. For example, if the user is a Member, they can&#x27;t unverify an Admin&#x27;s verified result.</p>
+<p>Once a result is unverified, prior verified results that were returned as verified based on that verified data object, will be unverified for anyone who received them. This ensure the highest level accuracy and agreement possible for human-verified information from the AI.</p>
+<doc-anchor-target id="security-implications">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#security-implications">#</doc-anchor-trigger>
+        <span>Security Implications</span>
+    </h3>
+</doc-anchor-target>
+<p>Identical verified results are only returned for users who share a database connection through their teams. Similar results are only returned for an organization if two users share the same database, but not necessarily the same connection. This is important for situations where Users rely on jinjafied schemas. The query is re-ran to get the information relevant to the other user&#x27;s connection, but the query itself remains verified.</p>
+<p>This setup ensures that only those who have access to shared connections are able to view semantically similar information and keeps the data secure.</p>
 
                                 
                                 <!-- Required only on API pages -->
