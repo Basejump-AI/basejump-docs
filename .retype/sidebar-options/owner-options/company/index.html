@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.795035605936">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.797615346506">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -33,11 +33,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../images/favicon.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.795035605936" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.797615346506" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.795035605936" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.797615346506" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.795035605936" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.797615346506" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -270,6 +270,59 @@
     <a href="../../../data-governance/" class="absolute block inset-0"></a>
 </div>
 </p>
+<doc-anchor-target id="private-storage">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#private-storage">#</doc-anchor-trigger>
+        <span>Private Storage</span>
+    </h3>
+</doc-anchor-target>
+<p>For users that want improved security, they can store the AI result responses in their own private AWS object storage via S3. This security enhancement will ensure no spreadsheets from the user database is ever stored within Basejump. In order to add private storage, go to the Company -&gt; Advanced section.</p>
+<p><figure class="content-center">
+    <img src="../../../images/company/private_storage_option.png" alt="Private storage option screenshot">
+    <figcaption class="caption">Private storage option screenshot</figcaption>
+</figure>
+</p>
+<p>Use the following steps to add your own private storage:</p>
+<ol>
+<li>Select &#x27;Add Private Storage&#x27; and fill out the credentials for your S3 connection</li>
+</ol>
+<p><figure class="content-center">
+    <img src="../../../images/company/private_storage_s3_credentials.png" alt="Screenshot of S3 credentials modal form">
+    <figcaption class="caption">Screenshot of S3 credentials modal form</figcaption>
+</figure>
+</p>
+<ol start="2">
+<li>Here is what the successfully added storage should look like</li>
+</ol>
+<p><figure class="content-center">
+    <img src="../../../images/company/private_storage_row_example.png" alt="Private storage row example">
+    <figcaption class="caption">Private storage row example</figcaption>
+</figure>
+</p>
+<ol start="3">
+<li>Activate your private storage to start using it. This will migrate any existing results within Basejump to your AWS bucket.</li>
+</ol>
+<p><figure class="content-center">
+    <img src="../../../images/company/activate_private_storage.png" alt="Activate private storage">
+    <figcaption class="caption">Activate private storage</figcaption>
+</figure>
+</p>
+<ol start="4">
+<li>You will see a &#x27;Migration started&#x27; status. Once that has been completed, the active status will have a checkmark.</li>
+</ol>
+<p><figure class="content-center">
+    <img src="../../../images/company/activated_private_storage.png" alt="Activate private storage">
+    <figcaption class="caption">Activate private storage</figcaption>
+</figure>
+</p>
+<p>This private storage is for the results generated (anything in the Data dropdown in chat) and does not include the text within the message bubble from the AI. This ensures that no spreadsheets of information are stored in Basejump object storage.</p>
+<doc-anchor-target id="deactivating-private-storage">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#deactivating-private-storage">#</doc-anchor-trigger>
+        <span>Deactivating Private Storage</span>
+    </h4>
+</doc-anchor-target>
+<p>Users can also deactivate their private storage. Once deactivated, a migration will begin to migrate information to Basejump S3 object storage to ensure users can still access their data objects. An alternative to deactivation would be adding another private storage and marking that as active instead. There can only be 1 active private storage connection at a time.</p>
 
                                 
                                 <!-- Required only on API pages -->

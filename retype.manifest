@@ -1,6 +1,6 @@
 {
   "version": "3.6.0",
-  "created": "2025-03-11T19:13:28Z",
+  "created": "2025-04-10T15:49:09Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -86,7 +86,13 @@
       "path": "images/changelog/interactive_tutorials_2025_01_14.png"
     },
     {
+      "path": "images/changelog/private_storage_option_2025_04_10.png"
+    },
+    {
       "path": "images/changelog/sql_server_and_snowflake_integrations_20250311.png"
+    },
+    {
+      "path": "images/changelog/thumbs_up_2025_04_10.png"
     },
     {
       "path": "images/changelog/verified_result_2025_03_06.png"
@@ -113,6 +119,12 @@
       "path": "images/chat/stop_chat.png"
     },
     {
+      "path": "images/chat/thumbs_down_issue_report.png"
+    },
+    {
+      "path": "images/chat/thumbs_up.png"
+    },
+    {
       "path": "images/chat/verified_result.png"
     },
     {
@@ -122,7 +134,22 @@
       "path": "images/collections/collections_page.png"
     },
     {
+      "path": "images/company/activate_private_storage.png"
+    },
+    {
+      "path": "images/company/activated_private_storage.png"
+    },
+    {
       "path": "images/company/invite_company_members.png"
+    },
+    {
+      "path": "images/company/private_storage_option.png"
+    },
+    {
+      "path": "images/company/private_storage_row_example.png"
+    },
+    {
+      "path": "images/company/private_storage_s3_credentials.png"
     },
     {
       "path": "images/company/verify_mode_option.png"

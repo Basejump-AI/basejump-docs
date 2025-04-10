@@ -64,3 +64,15 @@ While chatting with the AI, you will generate results for your queries. These re
 While the AI is thinking through a problem, you have the option to stop the chat. In order to stop the chat, select the blue square icon that shows above the up-pointing chevron in the chat toolbar. This will stop all running requests within the chat.
 
 ![Stopping the chat](/images/chat/stop_chat.png)
+
+## Providing Feedback through Thumbs Up/Down Reactions
+
+When the AI responds, a User can provide feedback using a thumbs up/down reaction. 
+
+![Thumbs up example](/images/chat/thumbs_up.png)
+
+If a thumbs up is given, this information is cached and verified for other users using the Basejump verification engine. This will improve accuracy of results going forward and help train the AI to improve its responses going forward. 
+
+If a thumbs down is given, a feedback modal is opened where the user can explain why this result was incorrect. This also helps the AI to improve the accuracy of the results by adding this feedback to the message history.
+
+![Thumbs down modal](/images/chat/thumbs_down_issue_report.png)

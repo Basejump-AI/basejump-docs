@@ -1,0 +1,28 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "andreasmartinson",
+            "database": "andreasmartinson",
+            "username": "andreasmartinson"
+        },
+        {
+            "pgOptions": {
+                "ssl": {
+                    "rejectUnauthorized": false
+                }
+            },
+            "previewLimit": 50,
+            "server": "164.92.120.245",
+            "port": 6432,
+            "driver": "PostgreSQL",
+            "username": "postgres",
+            "database": "basejump",
+            "name": "DO Basejump Prod",
+            "password": "undvFk8GJUXDQvQEEmUhA7dTcArz4qsj"
+        }
+    ]
+}

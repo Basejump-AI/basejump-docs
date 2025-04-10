@@ -1,5 +1,68 @@
 # Changelog
 
+## Improved Accuracy, Feedback, and Private Storage
+_April 10, 2025_
+
+This release we improved AI accuracy, added thumbs up/down on user messages, and added private storage options for data retrieved from the database.
+
+## TLDR
+- :dart: Accuracy was improved by enforcing no hallucinated columns or filter values
+- :+1: Users can now provide feedback to the AI using thumbs up/down on a message
+- :file_cabinet: Users can store saved data results in their own private storage
+
+### Summary
+
+We're proud of what we have been able to accomplish this past month. Users will notice improved accuracy in the AI responses due to code added to ensure no hallucinated columns or filters. This adds to our already existing guarantee of no hallucinated tables as well as enforcement of valid SQL queries in general. The next feature we will add is enforcement of joins if they are defined in the metadata.
+
+We also added a way for users to provide feedback to the AI. Users can now use the thumbs up/down reactions on a given message to improve accuracy of the AI responses over time.
+
+![Thumbs up example](/images/changelog/thumbs_up_2025_04_10.png)
+
+More information about message thumbs up/down reactions can be found here: [!ref](/sidebar-options/member-options/chat.md)
+
+Finally, for users that want improved security, they can store the AI result responses in their own private AWS object storage via S3. This security enhancement will ensure no spreadsheets from the user database is ever stored within Basejump. In order to add private storage, go to the Company -> Advanced section.
+
+![Private storage option screenshot](/images/changelog/private_storage_option_2025_04_10.png)
+
+More information about private storage can be found here: [!ref](/sidebar-options/owner-options/company.md)
+
+### API Release
+
+==- API
+**Release v1.2.0**
+
+_April 10, 2025_
+
+### Features
+- Filter verification: the AI is now unable to filter by invalid values
+- Added team and datasource descriptions to improve AI context
+- Added SQL query planning so the AI will plan ahead when creating the SQL query and self-reflect
+- Added S3 private storage option if customers want to save their own data in their private data store
+- Added thumbs up/down reactions in chat to provide feedback to the AI
+- Enforcement of columns was added so the AI is never able to use an invalid column name or one that has been ignored
+- Changed the message dropdown from 'SQL' to 'Audit'
+
+#### New Endpoints
+- PUT /chat/message/{parent_msg_uuid}/thumbs-up/
+- PUT /account/team/{team_uuid}/
+- GET /connection/storage/list/
+- POST /connection/storage/
+- GET /connection/storage/migration-status/
+- GET /connection/storage/{storage_uuid}/
+- PUT /connection/storage/activate/{storage_uuid}/
+- PUT /connection/storage/{storage_uuid}/
+- DELETE /connection/storage/{storage_uuid}/
+
+### Bugs
+- Fixed issue while chatting where if two prompts were submitted simultaneously, then the prompt that completes first would cancel the other from completing
+
+
+### Breaking Changes
+- Changed all endpoint paths with underscores in the name to dashes
+  - For example GET /database/{db_uuid}/index_status/ -> /database/{db_uuid}/index-status/
+
+===
+
 ## New Integrations: Snowflake and MS SQL Server
 _March 11, 2025_
 

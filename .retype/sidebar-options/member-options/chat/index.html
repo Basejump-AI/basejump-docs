@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.795035605936">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.797615346506">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -33,11 +33,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../images/favicon.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.6.0.795035605936" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.797615346506" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.795035605936" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.797615346506" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.795035605936" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.797615346506" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -286,6 +286,25 @@
 <p><figure class="content-center">
     <img src="../../../images/chat/stop_chat.png" alt="Stopping the chat">
     <figcaption class="caption">Stopping the chat</figcaption>
+</figure>
+</p>
+<doc-anchor-target id="providing-feedback-through-thumbs-updown-reactions">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#providing-feedback-through-thumbs-updown-reactions">#</doc-anchor-trigger>
+        <span>Providing Feedback through Thumbs Up/Down Reactions</span>
+    </h2>
+</doc-anchor-target>
+<p>When the AI responds, a User can provide feedback using a thumbs up/down reaction.</p>
+<p><figure class="content-center">
+    <img src="../../../images/chat/thumbs_up.png" alt="Thumbs up example">
+    <figcaption class="caption">Thumbs up example</figcaption>
+</figure>
+</p>
+<p>If a thumbs up is given, this information is cached and verified for other users using the Basejump verification engine. This will improve accuracy of results going forward and help train the AI to improve its responses going forward.</p>
+<p>If a thumbs down is given, a feedback modal is opened where the user can explain why this result was incorrect. This also helps the AI to improve the accuracy of the results by adding this feedback to the message history.</p>
+<p><figure class="content-center">
+    <img src="../../../images/chat/thumbs_down_issue_report.png" alt="Thumbs down modal">
+    <figcaption class="caption">Thumbs down modal</figcaption>
 </figure>
 </p>
 
