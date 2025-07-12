@@ -1,3 +1,6 @@
+> [!important]
+> This example is meant for educational purposes only and not for production use.
+
 ```python ~Python Example~
 
 import requests
@@ -8,7 +11,7 @@ logger = logging.getLogger(__name__)
 # --- Configuration ---
 BASEJUMP_API_URL = "https://api.basejump.ai/v1/"
 BASEJUMP_API_CLIENT_SECRET = "YOUR_API_KEY_CLIENT_SECRET"
-BASEJUMP_API_OWNER_ACCESS_TOKEN = "YOUR_API_KEY_OWNER_ACCESS_TOKEN"
+BASEJUMP_API_OWNER_ACCESS_TOKEN = "YOUR_API_OWNER_ACCESS_TOKEN"
 BASEJUMP_CLIENT_UUID = "YOUR_CLIENT_UUID"
 BASEJUMP_TEAM_UUID = "YOUR_TEAM_UUID"
 
@@ -63,7 +66,7 @@ if not user.basejump_user_uuid:
     user.basejump_user_uuid = response.json().get("user_uuid", "")
     user.save()
 
-    # 2. Add user to team
+    # 2. Add user to Basejump team
     request_url = (
         BASEJUMP_API_URL
         + f"/account/user/{user.basejump_user_uuid}/team/{BASEJUMP_TEAM_UUID}/"
@@ -73,7 +76,7 @@ if not user.basejump_user_uuid:
         request_url,
         headers={
             "Content-Type": "application/json",
-            "Authorization": f"Bearer {BASEJUMP_API_OWNER_ACCESS_TOKEN}",
+            "Authorization": f"Bearer {BASEJUMP_OWNER_ACCESS_TOKEN}",
         },
     )
 
@@ -86,7 +89,7 @@ if not user.basejump_user_uuid:
 BASEJUMP_USER_UUID = user.basejump_user_uuid
 
 response = requests.post(
-    "https://app.basejump.ai/embed/auth/get-embed-redirect-url/",
+    "https://app.basejump.ai/embed/get-embed-redirect-url/",
     headers={
         "Content-Type": "application/json",
         "Client-Secret": BASEJUMP_API_CLIENT_SECRET,
