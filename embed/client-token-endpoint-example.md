@@ -41,14 +41,7 @@ if not user.is_authenticated:
 # If user does not yet have a basejump_user_uuid
 if not user.basejump_user_uuid:
     # 1. Create new Basejump user
-    url_params = {
-        "username": user.username,
-        "role": "MEMBER",
-        "email": user.email,
-        "team_uuid": BASEJUMP_TEAM_UUID,
-    }
-    query_string = "&".join(f"{k}={v}" for k, v in url_params.items())
-    request_url = BASEJUMP_API_URL + "/account/user/?" + query_string
+    request_url = BASEJUMP_API_URL + "/account/user/"
 
     response = requests.post(
         request_url,
@@ -56,6 +49,11 @@ if not user.basejump_user_uuid:
             "Content-Type": "application/json",
             "Client-Secret": BASEJUMP_API_CLIENT_SECRET,
         },
+        params={
+            "username": user.username,
+            "email": user.email,
+            "role": "MEMBER",
+        }
     )
 
     if response.status_code != 200:
@@ -95,7 +93,7 @@ response = requests.post(
         "Client-Secret": BASEJUMP_API_CLIENT_SECRET,
         "Embed-Origin": "https://myapp.com",
     },
-    params={
+    data={
         "client_uuid": BASEJUMP_CLIENT_UUID,
         "user_uuid": BASEJUMP_USER_UUID,
         "team_uuid": BASEJUMP_TEAM_UUID,
