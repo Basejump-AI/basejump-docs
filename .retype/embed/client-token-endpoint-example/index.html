@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.805597776331">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.805753539150">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -31,12 +31,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../images/favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0.805597776331" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.805753539150" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.805597776331" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.805753539150" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.805597776331" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.805597776331" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.805753539150" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.805753539150" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -234,14 +234,7 @@ if not user.is_authenticated:
 # If user does not yet have a basejump_user_uuid
 if not user.basejump_user_uuid:
     # 1. Create new Basejump user
-    url_params = {
-        &quot;username&quot;: user.username,
-        &quot;role&quot;: &quot;MEMBER&quot;,
-        &quot;email&quot;: user.email,
-        &quot;team_uuid&quot;: BASEJUMP_TEAM_UUID,
-    }
-    query_string = &quot;&amp;&quot;.join(f&quot;{k}={v}&quot; for k, v in url_params.items())
-    request_url = BASEJUMP_API_URL + &quot;/account/user/?&quot; + query_string
+    request_url = BASEJUMP_API_URL + &quot;/account/user/&quot;
 
     response = requests.post(
         request_url,
@@ -249,6 +242,11 @@ if not user.basejump_user_uuid:
             &quot;Content-Type&quot;: &quot;application/json&quot;,
             &quot;Client-Secret&quot;: BASEJUMP_API_CLIENT_SECRET,
         },
+        params={
+            &quot;username&quot;: user.username,
+            &quot;email&quot;: user.email,
+            &quot;role&quot;: &quot;MEMBER&quot;,
+        }
     )
 
     if response.status_code != 200:
@@ -288,7 +286,7 @@ response = requests.post(
         &quot;Client-Secret&quot;: BASEJUMP_API_CLIENT_SECRET,
         &quot;Embed-Origin&quot;: &quot;https://myapp.com&quot;,
     },
-    params={
+    data={
         &quot;client_uuid&quot;: BASEJUMP_CLIENT_UUID,
         &quot;user_uuid&quot;: BASEJUMP_USER_UUID,
         &quot;team_uuid&quot;: BASEJUMP_TEAM_UUID,
