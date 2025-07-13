@@ -17,7 +17,7 @@ To ensure the security of your client token endpoint, it's important to understa
 ### Requesting a Redirect URL
 
 > [!important]
-> The following assumes that you have a valid **API key client secret** and a valid **team UUID**. If you do not have a valid API key, please refer to the [API](/api.md) documentation for more information. We also have a [client token endpoint example](/embed/client-token-endpoint-example.md) which you can checkout for greater clarification.
+> The following assumes that you have a valid **API key client secret** and a valid **team UUID**. If you do not have a valid API key, please refer to the [API Keys](/sidebar-options/owner-options/api-keys.md) documentation for more information. We also have a [client token endpoint example](/embed/client-token-endpoint-example.md) which you can checkout for greater clarification.
 
 To request a unique embed redirect url, make a POST request to the `https://app.basejump.ai/embed/get-embed-redirect-url/` endpoint:
 
