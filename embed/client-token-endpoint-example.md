@@ -9,14 +9,15 @@ import logging
 logger = logging.getLogger(__name__)
 
 # --- Configuration ---
-BASEJUMP_API_URL = "https://api.basejump.ai/v1/"
+BASEJUMP_API_URL = "https://api.basejump.ai/v1"
+BASEJUMP_EMBED_URL = "https://app.basejump.ai/embed"
 BASEJUMP_API_CLIENT_SECRET = "YOUR_API_KEY_CLIENT_SECRET"
 BASEJUMP_API_OWNER_ACCESS_TOKEN = "YOUR_API_OWNER_ACCESS_TOKEN"
 BASEJUMP_CLIENT_UUID = "YOUR_CLIENT_UUID"
 BASEJUMP_TEAM_UUID = "YOUR_TEAM_UUID"
 
 
-# --- Simulated User Class ---
+# --- Simulated User Class (Use your own user/session logic) ---
 class User:
     def __init__(self, username, email, is_authenticated, basejump_user_uuid=None):
         self.username = username
@@ -87,7 +88,7 @@ if not user.basejump_user_uuid:
 BASEJUMP_USER_UUID = user.basejump_user_uuid
 
 response = requests.post(
-    "https://app.basejump.ai/embed/get-embed-redirect-url/",
+    BASEJUMP_EMBED_URL + "/get-embed-redirect-url/",
     headers={
         "Content-Type": "application/json",
         "Client-Secret": BASEJUMP_API_CLIENT_SECRET,
