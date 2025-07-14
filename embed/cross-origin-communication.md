@@ -13,7 +13,8 @@ The embed code loads external scripts and stylesheets from `cdn.basejump.ai` and
 ```html ~Example CSP:~
 Content-Security-Policy: 
 script-src 'self' https://app.basejump.ai https://cdn.basejump.ai; 
-style-src 'self' https://app.basejump.ai https://cdn.basejump.ai; img-src 'self' https://cdn.basejump.ai; 
+style-src 'self' https://app.basejump.ai https://cdn.basejump.ai; 
+img-src 'self' https://app.basejump.ai https://cdn.basejump.ai; 
 connect-src 'self' https://app.basejump.ai; 
 frame-src 'self' https://app.basejump.ai
 ```
