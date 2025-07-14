@@ -1,10 +1,14 @@
 > [!important]
 > This example is meant for educational purposes only and not for production use.
 
-```python ~Python Example~
+> [!note]
+> If you are developing in a local environment without a publicly accessible address, you'll need to use a tunneling service such as ngrok to expose your local server to the internet over https. When you do this, you'll need to update the `Embed-Origin` header in the example to match the ngrok url.
+
+```python ~Python/Flask Example~
 
 import requests
 import logging
+from flask import redirect
 
 logger = logging.getLogger(__name__)
 
@@ -107,12 +111,12 @@ if response.status_code != 200:
     print({"error": "Unauthorized"})
     exit(1)
 
-auth_redirect_url = response.json().get("redirect_url", "")
-if not auth_redirect_url:
-    logger.error("auth_redirect_url is required")
-    print({"error": "auth_redirect_url is required"})
+embed_redirect_url = response.json().get("redirect_url", "")
+if not embed_redirect_url:
+    logger.error("embed_redirect_url is required")
+    print({"error": "embed_redirect_url is required"})
     exit(1)
 
-# Simulate redirect
-print("Redirect to:", auth_redirect_url)
+# Redirect user to the embed_redirect_url
+return redirect(embed_redirect_url)
 ```
