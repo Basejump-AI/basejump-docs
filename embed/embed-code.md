@@ -75,5 +75,3 @@ Here are all the arguments available for the embed code:
 * **theme:** The theme to use for the chat interface. Options are "light" or "dark". By default this is set to "light".
 
 Once you have updated these values you can place the embed code into your application. Place the code within the page or component where you wish to have the chat ui accessible. 
-
-**Before your embed code will work, you will need to setup a client token endpoint** which we will go over in the [next section](/embed/client-token-endpoint.md). 

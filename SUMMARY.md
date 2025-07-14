@@ -18,6 +18,7 @@
 * [Embedding](embed/README.md)
   * [Introduction](embed/introduction.md)
   * [Embed Code](embed/embed-code.md)
+  * [Cross-Origin Communication](embed/cross-origin-communication.md)
   * [Client Token Endpoint](embed/client-token-endpoint.md)
   * [Client Token Endpoint Example](embed/client-token-endpoint-example.md)
 * [Security](security.md)

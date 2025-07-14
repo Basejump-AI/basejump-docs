@@ -14,6 +14,10 @@ To ensure the security of your client token endpoint, it's important to understa
 5. Basejump authenticates the user using an encrypted token included in the redirect url
 6. If authenticated successfully, a Basejump web app session is created and the user is redirected to the Basejump chat interface. If not, an error is displayed or the iframe is destroyed.
 
+
+> [!Note]
+> If the iframe ancestor does not match the Embed-Origin, the embed session will not authenticate.
+
 ### Requesting a Redirect URL
 
 > [!important]
@@ -52,6 +56,7 @@ If your request is successful the response body will be a json object containing
     "instructions": "Use this url to redirect the user to complete embed authentication"
 }
 ```
+
 
 ### Redirecting the User
 
