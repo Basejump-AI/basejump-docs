@@ -1,6 +1,6 @@
 {
   "version": "3.11.0",
-  "created": "2025-07-13T20:43:00Z",
+  "created": "2025-07-14T17:45:49Z",
   "files": [
     {
       "path": ".nojekyll"
@@ -51,6 +51,9 @@
     },
     {
       "path": "embed/client-token-endpoint/index.html"
+    },
+    {
+      "path": "embed/cross-origin-communication/index.html"
     },
     {
       "path": "embed/embed-code/index.html"
