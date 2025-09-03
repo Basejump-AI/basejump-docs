@@ -20,6 +20,7 @@
   * [Embed Code](embed/embed-code.md)
   * [Cross-Origin Communication](embed/cross-origin-communication.md)
   * [Client Token Endpoint](embed/client-token-endpoint.md)
+  * [Service Users](embed/service-members.md)
   * [Client Token Endpoint Example](embed/client-token-endpoint-example.md)
 * [Security](security.md)
 * [Sidebar Options](sidebar-options/README.md)

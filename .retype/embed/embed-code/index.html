@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.805843954837">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.810253954969">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -31,12 +31,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../images/favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0.805843954837" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.810253954969" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.805843954837" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.810253954969" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.805843954837" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.805843954837" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.810253954969" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.810253954969" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -204,22 +204,31 @@
 <p>Your embed code will look something like this:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title"><sub>Example embed code:</sub></div>
-<pre translate="no" class="language-markup"><code v-pre class="language-markup">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.basejump.ai/css/embed.min.css&quot; /&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.basejump.ai/js/embed.min.js&quot;&gt;&lt;/script&gt;
+<pre translate="no" class="language-markup"><code v-pre class="language-markup">&lt;link
+  rel=&quot;stylesheet&quot;
+  type=&quot;text/css&quot;
+  href=&quot;https://cdn.basejump.ai/css/embed.min.css&quot;
+/&gt;
+&lt;script
+  type=&quot;text/javascript&quot;
+  src=&quot;https://cdn.basejump.ai/js/embed.min.js&quot;
+&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
-    window.addEventListener(&quot;DOMContentLoaded&quot;, function () {
-        const embed = new BJEmbed({
-            public_key: &quot;YOUR_PUBLIC_KEY&quot;,
-            client_token_endpoint: &quot;YOUR_CLIENT_TOKEN_ENDPOINT&quot;,
-            container: document.querySelector(&quot;#bjai-embed&quot;),
-            view: &quot;chat&quot;,
-            // optional
-            theme: &quot;light&quot;,
-            basejump_iframe_url: &quot;https://app.basejump.ai&quot;,
-            assistant_name: &quot;AI Data Agent&quot;,
-            colors: {}
-        });
+  window.addEventListener(&quot;DOMContentLoaded&quot;, function () {
+    const embed = new BJEmbed({
+      public_key: &quot;YOUR_PUBLIC_KEY&quot;,
+      client_token_endpoint: &quot;YOUR_CLIENT_TOKEN_ENDPOINT&quot;,
+      container: document.querySelector(&quot;#bjai-embed&quot;),
+      view: &quot;chat&quot;,
+      // optional
+      theme: &quot;light&quot;,
+      basejump_iframe_url: &quot;https://app.basejump.ai&quot;,
+      assistant_name: &quot;AI Data Agent&quot;,
+      colors: {},
+      display_type: &quot;floating&quot;, // floating, inline
+      username: &quot;subuser1&quot;, // required for service members
     });
+  });
 &lt;/script&gt;
 &lt;div id=&quot;bjai-embed&quot;&gt;&lt;/div&gt;</code></pre>
 </doc-codeblock></div>
@@ -245,29 +254,31 @@
 <div class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title"><sub>Example colors object:</sub></div>
 <pre translate="no" class="language-json"><code v-pre class="language-json">{
-&quot;text-primary&quot;: &quot;#6d28d9&quot;,
-&quot;icon&quot;: &quot;#f59e42&quot;,
-&quot;icon-hover&quot;: &quot;#e67c19&quot;,
-&quot;button&quot;: &quot;#3b82f6&quot;,
-&quot;button-text&quot;: &quot;#ffffff&quot;,
-&quot;button-hover&quot;: &quot;#e5e7eb&quot;,
-&quot;button-primary&quot;: &quot;#ff69b4&quot;,
-&quot;button-primary-hover&quot;: &quot;#ff1493&quot;,
-&quot;button-secondary&quot;: &quot;#50fa7b&quot;,
-&quot;button-secondary-hover&quot;: &quot;#22c55e&quot;,
-&quot;chat-bubble&quot;: &quot;#b4f8ff&quot;,
-&quot;chat-bubble-primary&quot;: &quot;#a78bfa&quot;,
-&quot;chat-bubble-text&quot;: &quot;#212121&quot;,
-&quot;chat-bubble-thoughts-text&quot;: &quot;#ffffff&quot;,
-&quot;chat-bubble-primary-text&quot;: &quot;#fff7fb&quot;,
-&quot;success&quot;: &quot;#a78bfa&quot;,
-&quot;error&quot;: &quot;#ef4444&quot;,
-&quot;warning&quot;: &quot;#f59e42&quot;,
-&quot;info&quot;: &quot;#38bdf8&quot;
+  &quot;text-primary&quot;: &quot;#6d28d9&quot;,
+  &quot;icon&quot;: &quot;#f59e42&quot;,
+  &quot;icon-hover&quot;: &quot;#e67c19&quot;,
+  &quot;button&quot;: &quot;#3b82f6&quot;,
+  &quot;button-text&quot;: &quot;#ffffff&quot;,
+  &quot;button-hover&quot;: &quot;#e5e7eb&quot;,
+  &quot;button-primary&quot;: &quot;#ff69b4&quot;,
+  &quot;button-primary-hover&quot;: &quot;#ff1493&quot;,
+  &quot;button-secondary&quot;: &quot;#50fa7b&quot;,
+  &quot;button-secondary-hover&quot;: &quot;#22c55e&quot;,
+  &quot;chat-bubble&quot;: &quot;#b4f8ff&quot;,
+  &quot;chat-bubble-primary&quot;: &quot;#a78bfa&quot;,
+  &quot;chat-bubble-text&quot;: &quot;#212121&quot;,
+  &quot;chat-bubble-thoughts-text&quot;: &quot;#ffffff&quot;,
+  &quot;chat-bubble-primary-text&quot;: &quot;#fff7fb&quot;,
+  &quot;success&quot;: &quot;#a78bfa&quot;,
+  &quot;error&quot;: &quot;#ef4444&quot;,
+  &quot;warning&quot;: &quot;#f59e42&quot;,
+  &quot;info&quot;: &quot;#38bdf8&quot;
 }</code></pre>
 </doc-codeblock></div>
 </li>
 <li><strong>theme:</strong> The theme to use for the chat interface. Options are &quot;light&quot; or &quot;dark&quot;. By default this is set to &quot;light&quot;.</li>
+<li><strong>display_type:</strong> The display type to use for the chat interface. Options are &quot;floating&quot; or &quot;inline&quot;. By default this is set to &quot;floating&quot;.</li>
+<li><strong>username:</strong> The username for the service member sub member. This is required if you are providing a user_uuid for a service member.</li>
 </ul>
 <p>Once you have updated these values you can place the embed code into your application. Place the code within the page or component where you wish to have the chat ui accessible.</p>
 
