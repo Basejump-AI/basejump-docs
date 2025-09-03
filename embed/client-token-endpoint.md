@@ -64,3 +64,9 @@ Once you have a redirect url, you can redirect the user to it. The user will be 
 
 That's it! Your embed is complete and users can now access the Basejump chat interface within your application.
 
+### Service Members
+
+Basejump has created a special user role called a **Service Member** for external applications to use with the embed code. Service members are a special user role that cannot login to the Basejump web app. Their main purpose is to simplify the number of users an external application needs to create and manage, for example: a single service member could be shared by multiple users within an application. 
+
+To learn more about service members, [click here](/embed/service-members.md).
+

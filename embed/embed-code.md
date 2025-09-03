@@ -10,22 +10,31 @@ Copy the embed code in the example or click **preview** to test the embed code o
 Your embed code will look something like this:
 
 ```html ~Example embed code:~
-<link rel="stylesheet" type="text/css" href="https://cdn.basejump.ai/css/embed.min.css" />
-<script type="text/javascript" src="https://cdn.basejump.ai/js/embed.min.js"></script>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.basejump.ai/css/embed.min.css"
+/>
+<script
+  type="text/javascript"
+  src="https://cdn.basejump.ai/js/embed.min.js"
+></script>
 <script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", function () {
-        const embed = new BJEmbed({
-            public_key: "YOUR_PUBLIC_KEY",
-            client_token_endpoint: "YOUR_CLIENT_TOKEN_ENDPOINT",
-            container: document.querySelector("#bjai-embed"),
-            view: "chat",
-            // optional
-            theme: "light",
-            basejump_iframe_url: "https://app.basejump.ai",
-            assistant_name: "AI Data Agent",
-            colors: {}
-        });
+  window.addEventListener("DOMContentLoaded", function () {
+    const embed = new BJEmbed({
+      public_key: "YOUR_PUBLIC_KEY",
+      client_token_endpoint: "YOUR_CLIENT_TOKEN_ENDPOINT",
+      container: document.querySelector("#bjai-embed"),
+      view: "chat",
+      // optional
+      theme: "light",
+      basejump_iframe_url: "https://app.basejump.ai",
+      assistant_name: "AI Data Agent",
+      colors: {},
+      display_type: "floating", // floating, inline
+      username: "subuser1", // required for service members
     });
+  });
 </script>
 <div id="bjai-embed"></div>
 ```
@@ -38,18 +47,18 @@ Here are all the arguments available for the embed code:
 
 **Required:**
 
-* **public_key:** The public key generated alongside your API key. You can access this in the API keys tab by selecting the key and copying it from the key details.
-* **client_token_endpoint:** The path to a unique endpoint on your applications server, ex: `https://myapp.com/basejump-client-token-endpoint`
-* **container:** The container element to render the embed into. By default this is set to the first element with the id `bjai-embed`.
-* **view:** The view to display after authentication. Currently only supports **chat**.
+- **public_key:** The public key generated alongside your API key. You can access this in the API keys tab by selecting the key and copying it from the key details.
+- **client_token_endpoint:** The path to a unique endpoint on your applications server, ex: `https://myapp.com/basejump-client-token-endpoint`
+- **container:** The container element to render the embed into. By default this is set to the first element with the id `bjai-embed`.
+- **view:** The view to display after authentication. Currently only supports **chat**.
 
 **Optional:**
 
-* **assistant_name:** The name of the assistant you wish to use for the Basejump Data Agent. This is the name that will be displayed in the chat interface. By default this is set to "AI Data Agent".
-* **colors:** An object containing the colors to use for the chat interface. By default this is set to the Basejump color scheme.
+- **assistant_name:** The name of the assistant you wish to use for the Basejump Data Agent. This is the name that will be displayed in the chat interface. By default this is set to "AI Data Agent".
+- **colors:** An object containing the colors to use for the chat interface. By default this is set to the Basejump color scheme.
 
-    ```json ~Example colors object:~
-    {
+  ```json ~Example colors object:~
+  {
     "text-primary": "#6d28d9",
     "icon": "#f59e42",
     "icon-hover": "#e67c19",
@@ -69,9 +78,13 @@ Here are all the arguments available for the embed code:
     "error": "#ef4444",
     "warning": "#f59e42",
     "info": "#38bdf8"
-    }
-    ```
+  }
+  ```
 
-* **theme:** The theme to use for the chat interface. Options are "light" or "dark". By default this is set to "light".
+- **theme:** The theme to use for the chat interface. Options are "light" or "dark". By default this is set to "light".
 
-Once you have updated these values you can place the embed code into your application. Place the code within the page or component where you wish to have the chat ui accessible. 
+- **display_type:** The display type to use for the chat interface. Options are "floating" or "inline". By default this is set to "floating".
+
+- **username:** The username for the service member sub member. This is required if you are providing a user_uuid for a service member.
+
+Once you have updated these values you can place the embed code into your application. Place the code within the page or component where you wish to have the chat ui accessible.
