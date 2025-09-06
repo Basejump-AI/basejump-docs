@@ -103,6 +103,8 @@ response = requests.post(
         "user_uuid": BASEJUMP_USER_UUID,
         "team_uuid": BASEJUMP_TEAM_UUID,
         "view": "chat",
+        # Optional - inline or floating
+        "display_type": "floating",
         # Username is required for service users
         # "username": "subuser1",
     },
