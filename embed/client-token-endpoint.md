@@ -36,7 +36,9 @@ To request a unique embed redirect url, make a POST request to the `https://app.
 ```json ~Example request body~
 {
     "team_uuid": "YOUR_BASEJUMP_TEAM_UUID",
-    "user_uuid": "YOUR_BASEJUMP_USER_UUID"
+    "user_uuid": "YOUR_BASEJUMP_USER_UUID",
+    "username": "subuser1", // optional - required for service members
+    "display_type": "floating", // optional - inline or floating
 }
 ```
 

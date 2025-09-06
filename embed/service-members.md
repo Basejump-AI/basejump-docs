@@ -25,7 +25,9 @@ You will also need to include the `username` key in the request body. In the bac
 
 ```json ~Example request body~
 {
-  "user_uuid": "YOUR_BASEJUMP_USER_UUID",
-  "username": "subuser1"
+    "team_uuid": "YOUR_BASEJUMP_TEAM_UUID",
+    "user_uuid": "YOUR_BASEJUMP_USER_UUID",
+    "username": "subuser1",
+    "display_type": "floating", // optional - inline or floating
 }
 ```
